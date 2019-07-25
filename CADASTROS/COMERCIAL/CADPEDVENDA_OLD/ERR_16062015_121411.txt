@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : Inclui()
+ 
+ 
+Erro Numero    :  381
+Erro Descrição : Invalid property array index
+ 
+ 
+Função : Inclui()

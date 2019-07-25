@@ -1,0 +1,8 @@
+clsCADPRODOP = 0, 0, 0, 0, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+frmCADPRODOP = 0, 0, 0, 0, C, 200, 200, 961, 733, C
+frmCADPRODOPP = 0, 0, 0, 0, C, 225, 225, 986, 758, C
+clsFuncoes = 0, 0, 0, 0, C
+frmPESQPADRAO = 0, 0, 0, 0, C, 250, 250, 1011, 783, C
+clsPESQPADRAO = 0, 0, 0, 0, C

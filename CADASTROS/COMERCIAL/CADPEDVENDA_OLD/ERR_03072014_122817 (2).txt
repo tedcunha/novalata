@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : grdProduto_CellButtonClick()
+ 
+ 
+Erro Numero    : -2147217900
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near the keyword 'And'.
+ 
+ 
+Função : grdProduto_CellButtonClick()

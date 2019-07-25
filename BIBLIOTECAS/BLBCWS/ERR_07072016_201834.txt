@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDAP
+Função         : ImpPedSteel()
+ 
+ 
+Erro Numero    : -2147217900
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Line 61: Incorrect syntax near ')'.
+ 
+ 
+Função : ImpPedSteel()

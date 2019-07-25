@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : CmdSalva_Click()
+ 
+ 
+Erro Numero    :  13
+Erro Descrição : Type mismatch
+ 
+ 
+Função : CmdSalva_Click()

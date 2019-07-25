@@ -1,0 +1,5 @@
+clsCADRECMATLIT = 75, 75, 708, 526, C
+frmCADRECMATLIT = 100, 100, 1256, 551, C, 100, 100, 733, 551, C
+frmCADRECMATLITP = 25, 25, 658, 476, C, 125, 125, 758, 576, C
+VariaveisGen = 0, 0, 0, 0, C
+mdlVariaveis = 0, 0, 0, 0, C

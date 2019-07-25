@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDAP
+Função         : ImpPedSteel()
+ 
+ 
+Erro Numero    :  91
+Erro Descrição : Object variable or With block variable not set
+ 
+ 
+Função : ImpPedSteel()

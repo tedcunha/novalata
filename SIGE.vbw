@@ -1,0 +1,7 @@
+mdlVariaveis = 175, 175, 758, 626, C
+frmAbertura = 25, 25, 1181, 476, C, 25, 25, 669, 460, C
+frmAcesso = 25, 25, 920, 240, C, 50, 50, 694, 485, C
+frmAcessoLogon = 50, 50, 698, 483, C, 75, 75, 719, 510, C
+modFuncCWS = 25, 25, 976, 256, C
+frmSIGE = 52, 52, 711, 584, C, 26, 26, 945, 558, C
+VariaveisGen = 0, 0, 0, 0, C

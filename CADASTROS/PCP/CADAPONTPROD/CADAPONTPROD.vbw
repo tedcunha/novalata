@@ -1,0 +1,6 @@
+clsCADAPONTPROD = 250, 250, 1109, 757, C
+frmCADAPONTPROD = 100, 100, 730, 607, C, 0, 0, 761, 533, C
+frmCADAPONTPRODP = 225, 225, 984, 732, C, 25, 25, 786, 558, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+clsFuncoes = 150, 150, 909, 657, C

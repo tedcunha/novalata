@@ -1,0 +1,5 @@
+clsCADMOEDA = 0, 0, 0, 0, C
+frmCADMOEDA = 0, 0, 0, 0, C, 50, 50, 811, 583, C
+frmCADMOEDAP = 0, 0, 0, 0, C, 75, 75, 836, 608, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C

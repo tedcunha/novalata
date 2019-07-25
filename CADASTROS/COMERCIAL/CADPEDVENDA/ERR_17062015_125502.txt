@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : VerifOrdFat()
+ 
+ 
+Erro Numero    :  3265
+Erro Descrição : O item não pode ser encontrado na coleção correspondente ao nome ou ao ordinal solicitado.
+ 
+ 
+Função : VerifOrdFat()

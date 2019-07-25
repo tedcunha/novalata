@@ -1,0 +1,127 @@
+Line 1364: Class MSFlexGridLib.MSFlexGrid of control flxFaturamento was not a loaded control class.
+Line 1440: Class MSFlexGridLib.MSFlexGrid of control flxPedidos was not a loaded control class.
+Line 1478: Class MSFlexGridLib.MSFlexGrid of control flxVENDEDORES was not a loaded control class.
+Line 1497: Class MSFlexGridLib.MSFlexGrid of control flxTRANSP was not a loaded control class.
+Line 1688: Class MSFlexGridLib.MSFlexGrid of control flxTitPgtoPrazo was not a loaded control class.
+Line 1709: Class MSFlexGridLib.MSFlexGrid of control flxDpPgtAtrazo was not a loaded control class.
+Line 1739: Class MSFlexGridLib.MSFlexGrid of control flxPgtAntecipado was not a loaded control class.
+Line 1770: Class MSFlexGridLib.MSFlexGrid of control flxDuplVencidas was not a loaded control class.
+Line 1800: Class MSFlexGridLib.MSFlexGrid of control flxDuplApgt was not a loaded control class.
+Line 2321: Class MSFlexGridLib.MSFlexGrid of control flxATENDIDO was not a loaded control class.
+Line 2413: Class MSFlexGridLib.MSFlexGrid of control flxSISTSERTFIC was not a loaded control class.
+Line 2584: Class MSFlexGridLib.MSFlexGrid of control flxSTATUSAVALIACAO was not a loaded control class.
+Line 2965: Class MSFlexGridLib.MSFlexGrid of control flxEMPRESA was not a loaded control class.
+Line 3061: Class MSFlexGridLib.MSFlexGrid of control flxFORNEC was not a loaded control class.
+Line 3082: Class MSFlexGridLib.MSFlexGrid of control flxBANCOS was not a loaded control class.
+Line 3248: Class MSFlexGridLib.MSFlexGrid of control flxRESTRICOES was not a loaded control class.
+Line 3379: Class MSFlexGridLib.MSFlexGrid of control flxREFPESSOAL was not a loaded control class.
+Line 3497: Class MSFlexGridLib.MSFlexGrid of control flxREFEMPRESA was not a loaded control class.
+Line 3518: Class MSFlexGridLib.MSFlexGrid of control flxREFBANCARIA was not a loaded control class.
+Line 1370: The property name _ExtentX in flxFaturamento is invalid.
+Line 1371: The property name _ExtentY in flxFaturamento is invalid.
+Line 1372: The property name _Version in flxFaturamento is invalid.
+Line 1373: The property name FixedCols in flxFaturamento is invalid.
+Line 1446: The property name _ExtentX in flxPedidos is invalid.
+Line 1447: The property name _ExtentY in flxPedidos is invalid.
+Line 1448: The property name _Version in flxPedidos is invalid.
+Line 1449: The property name FixedCols in flxPedidos is invalid.
+Line 1450: The property name HighLight in flxPedidos is invalid.
+Line 1451: The property name SelectionMode in flxPedidos is invalid.
+Line 1484: The property name _ExtentX in flxVENDEDORES is invalid.
+Line 1485: The property name _ExtentY in flxVENDEDORES is invalid.
+Line 1486: The property name _Version in flxVENDEDORES is invalid.
+Line 1487: The property name FixedCols in flxVENDEDORES is invalid.
+Line 1503: The property name _ExtentX in flxTRANSP is invalid.
+Line 1504: The property name _ExtentY in flxTRANSP is invalid.
+Line 1505: The property name _Version in flxTRANSP is invalid.
+Line 1506: The property name FixedCols in flxTRANSP is invalid.
+Line 1507: The property name HighLight in flxTRANSP is invalid.
+Line 1508: The property name SelectionMode in flxTRANSP is invalid.
+Line 1694: The property name _ExtentX in flxTitPgtoPrazo is invalid.
+Line 1695: The property name _ExtentY in flxTitPgtoPrazo is invalid.
+Line 1696: The property name _Version in flxTitPgtoPrazo is invalid.
+Line 1697: The property name FixedCols in flxTitPgtoPrazo is invalid.
+Line 1698: The property name HighLight in flxTitPgtoPrazo is invalid.
+Line 1699: The property name SelectionMode in flxTitPgtoPrazo is invalid.
+Line 1715: The property name _ExtentX in flxDpPgtAtrazo is invalid.
+Line 1716: The property name _ExtentY in flxDpPgtAtrazo is invalid.
+Line 1717: The property name _Version in flxDpPgtAtrazo is invalid.
+Line 1718: The property name FixedCols in flxDpPgtAtrazo is invalid.
+Line 1719: The property name HighLight in flxDpPgtAtrazo is invalid.
+Line 1720: The property name SelectionMode in flxDpPgtAtrazo is invalid.
+Line 1745: The property name _ExtentX in flxPgtAntecipado is invalid.
+Line 1746: The property name _ExtentY in flxPgtAntecipado is invalid.
+Line 1747: The property name _Version in flxPgtAntecipado is invalid.
+Line 1748: The property name FixedCols in flxPgtAntecipado is invalid.
+Line 1749: The property name HighLight in flxPgtAntecipado is invalid.
+Line 1750: The property name SelectionMode in flxPgtAntecipado is invalid.
+Line 1776: The property name _ExtentX in flxDuplVencidas is invalid.
+Line 1777: The property name _ExtentY in flxDuplVencidas is invalid.
+Line 1778: The property name _Version in flxDuplVencidas is invalid.
+Line 1779: The property name FixedCols in flxDuplVencidas is invalid.
+Line 1780: The property name HighLight in flxDuplVencidas is invalid.
+Line 1781: The property name SelectionMode in flxDuplVencidas is invalid.
+Line 1806: The property name _ExtentX in flxDuplApgt is invalid.
+Line 1807: The property name _ExtentY in flxDuplApgt is invalid.
+Line 1808: The property name _Version in flxDuplApgt is invalid.
+Line 1809: The property name FixedCols in flxDuplApgt is invalid.
+Line 1810: The property name HighLight in flxDuplApgt is invalid.
+Line 1811: The property name SelectionMode in flxDuplApgt is invalid.
+Line 2327: The property name _ExtentX in flxATENDIDO is invalid.
+Line 2328: The property name _ExtentY in flxATENDIDO is invalid.
+Line 2329: The property name _Version in flxATENDIDO is invalid.
+Line 2330: The property name FixedCols in flxATENDIDO is invalid.
+Line 2331: The property name HighLight in flxATENDIDO is invalid.
+Line 2332: The property name SelectionMode in flxATENDIDO is invalid.
+Line 2419: The property name _ExtentX in flxSISTSERTFIC is invalid.
+Line 2420: The property name _ExtentY in flxSISTSERTFIC is invalid.
+Line 2421: The property name _Version in flxSISTSERTFIC is invalid.
+Line 2422: The property name FixedCols in flxSISTSERTFIC is invalid.
+Line 2423: The property name HighLight in flxSISTSERTFIC is invalid.
+Line 2424: The property name SelectionMode in flxSISTSERTFIC is invalid.
+Line 2590: The property name _ExtentX in flxSTATUSAVALIACAO is invalid.
+Line 2591: The property name _ExtentY in flxSTATUSAVALIACAO is invalid.
+Line 2592: The property name _Version in flxSTATUSAVALIACAO is invalid.
+Line 2593: The property name FixedCols in flxSTATUSAVALIACAO is invalid.
+Line 2971: The property name _ExtentX in flxEMPRESA is invalid.
+Line 2972: The property name _ExtentY in flxEMPRESA is invalid.
+Line 2973: The property name _Version in flxEMPRESA is invalid.
+Line 2974: The property name FixedCols in flxEMPRESA is invalid.
+Line 2975: The property name HighLight in flxEMPRESA is invalid.
+Line 2976: The property name SelectionMode in flxEMPRESA is invalid.
+Line 3067: The property name _ExtentX in flxFORNEC is invalid.
+Line 3068: The property name _ExtentY in flxFORNEC is invalid.
+Line 3069: The property name _Version in flxFORNEC is invalid.
+Line 3070: The property name FixedCols in flxFORNEC is invalid.
+Line 3071: The property name HighLight in flxFORNEC is invalid.
+Line 3072: The property name SelectionMode in flxFORNEC is invalid.
+Line 3088: The property name _ExtentX in flxBANCOS is invalid.
+Line 3089: The property name _ExtentY in flxBANCOS is invalid.
+Line 3090: The property name _Version in flxBANCOS is invalid.
+Line 3091: The property name FixedCols in flxBANCOS is invalid.
+Line 3092: The property name HighLight in flxBANCOS is invalid.
+Line 3093: The property name SelectionMode in flxBANCOS is invalid.
+Line 3254: The property name _ExtentX in flxRESTRICOES is invalid.
+Line 3255: The property name _ExtentY in flxRESTRICOES is invalid.
+Line 3256: The property name _Version in flxRESTRICOES is invalid.
+Line 3257: The property name FixedCols in flxRESTRICOES is invalid.
+Line 3258: The property name HighLight in flxRESTRICOES is invalid.
+Line 3259: The property name SelectionMode in flxRESTRICOES is invalid.
+Line 3385: The property name _ExtentX in flxREFPESSOAL is invalid.
+Line 3386: The property name _ExtentY in flxREFPESSOAL is invalid.
+Line 3387: The property name _Version in flxREFPESSOAL is invalid.
+Line 3388: The property name FixedCols in flxREFPESSOAL is invalid.
+Line 3389: The property name HighLight in flxREFPESSOAL is invalid.
+Line 3390: The property name SelectionMode in flxREFPESSOAL is invalid.
+Line 3503: The property name _ExtentX in flxREFEMPRESA is invalid.
+Line 3504: The property name _ExtentY in flxREFEMPRESA is invalid.
+Line 3505: The property name _Version in flxREFEMPRESA is invalid.
+Line 3506: The property name FixedCols in flxREFEMPRESA is invalid.
+Line 3507: The property name HighLight in flxREFEMPRESA is invalid.
+Line 3508: The property name SelectionMode in flxREFEMPRESA is invalid.
+Line 3524: The property name _ExtentX in flxREFBANCARIA is invalid.
+Line 3525: The property name _ExtentY in flxREFBANCARIA is invalid.
+Line 3526: The property name _Version in flxREFBANCARIA is invalid.
+Line 3527: The property name FixedCols in flxREFBANCARIA is invalid.
+Line 3528: The property name HighLight in flxREFBANCARIA is invalid.
+Line 3529: The property name SelectionMode in flxREFBANCARIA is invalid.

@@ -1,0 +1,2791 @@
+VERSION 1.0 CLASS
+BEGIN
+  MultiUse = -1  'True
+  Persistable = 0  'NotPersistable
+  DataBindingBehavior = 0  'vbNone
+  DataSourceBehavior  = 0  'vbNone
+  MTSTransactionMode  = 0  'NotAnMTSObject
+END
+Attribute VB_Name = "clsCADCLIENTE"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = True
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = True
+Option Explicit
+Dim intFILIAL      As Integer
+Dim intCLIECODIGO  As Long
+Dim strCLISTATUS   As String
+Dim strCLIERZAOSO  As String
+Dim strCLICPFCNPJ  As String
+Dim strCLIRGCGC    As String
+Dim strCLINOMFANT  As String
+Dim strCLIPESSOA   As String
+Dim strCLIENDEREC  As String
+Dim strCLIBAIRRO   As String
+Dim strCLICIDADE   As String
+Dim strCLIESTADO   As Integer
+Dim strCLICEP      As String
+Dim varCLITELNORM  As Variant
+Dim varCLICONTATO  As Variant
+Dim varCLIEMAIL    As Variant
+Dim varCLISITE     As Variant
+Dim dtCADASTRO     As Date
+Dim strCODSUFRA    As String
+Dim strCODNIRC     As String
+Dim dtDATANIRC     As Date
+Dim varBANCOS      As Variant
+Dim varREFBANCARIA As Variant
+Dim varREFCOMERC   As Variant
+Dim varREFPESSOAL  As Variant
+Dim varRESTRICOES  As Variant
+Dim varFORNECEDORE As Variant
+Dim varCLIENTES    As Variant
+Dim strBLOQPEDREST As String
+Dim strAVISARRESTR As String
+Dim strSEMPRBLOQPE As String
+Dim strBLOQAVISALD As String
+Dim strENDCOBRA    As String
+Dim strBAICOBRA    As String
+Dim strCIDCOBRA    As String
+Dim intESTCOBRA    As Integer
+Dim strCEPCOBRA    As String
+Dim strENDENTREGA  As String
+Dim strBAIENTREGA  As String
+Dim strCIDENTREGA  As String
+Dim intESTENTREGA  As Integer
+Dim strCEPENTREGA  As String
+Dim dblVALLIMCRED  As Double
+Dim dblAVISASALAC  As Double
+Dim dblBLQSALACIM  As Double
+Dim intMESEREAVAL  As Integer
+Dim strModulo      As String
+Dim intSEGMENTO    As Long
+Dim strSERTIFICADO As String
+Dim varSISTCERTIF  As Variant
+Dim varEMPREATENDE As Variant
+Dim strOBS         As String
+Dim strCLIEJAECLI  As String
+Dim arrTRANSP      As Variant
+Dim arrTECNICOS    As Variant
+Dim arrVENDEDORES  As Variant
+Dim strOBSCOM      As String
+Dim arrPRODUTO     As Variant
+Dim arrPRODUTOS    As Variant
+Dim arrCONDPGTOCLIE   As Variant
+
+Dim strCODREF           As String
+Dim intPermFatSepSN     As Integer
+Dim strDTULTFATNOVA     As String
+Dim strDTULTFATSTEEL    As String
+Dim intNECCONFEST       As Integer
+Dim intVISTELEST        As Integer
+Dim intDESBCLIE         As Integer
+
+Public Property Get DESBCLIE() As Integer
+    DESBCLIE = intDESBCLIE
+End Property
+
+Public Property Let DESBCLIE(ByVal vData As Integer)
+    intDESBCLIE = vData
+End Property
+
+Public Property Get VISTELEST() As Integer
+    VISTELEST = intVISTELEST
+End Property
+
+Public Property Let VISTELEST(ByVal vData As Integer)
+    intVISTELEST = vData
+End Property
+
+Public Property Get NECCONFEST() As Integer
+    NECCONFEST = intNECCONFEST
+End Property
+
+Public Property Let NECCONFEST(ByVal vData As Integer)
+    intNECCONFEST = vData
+End Property
+
+Public Property Get CONDPGTOCLIE() As Variant
+    CONDPGTOCLIE = arrCONDPGTOCLIE
+End Property
+
+Public Property Let CONDPGTOCLIE(ByVal vData As Variant)
+    arrCONDPGTOCLIE = vData
+End Property
+
+Public Property Get DTULTFATSTEEL() As String
+    DTULTFATSTEEL = strDTULTFATSTEEL
+End Property
+
+Public Property Let DTULTFATSTEEL(ByVal vData As String)
+    strDTULTFATSTEEL = vData
+End Property
+
+Public Property Get DTULTFATNOVA() As String
+    DTULTFATNOVA = strDTULTFATNOVA
+End Property
+
+Public Property Let DTULTFATNOVA(ByVal vData As String)
+    strDTULTFATNOVA = vData
+End Property
+
+Public Property Get PERMFATSSEPSN() As Integer
+    PERMFATSSEPSN = intPermFatSepSN
+End Property
+
+Public Property Let PERMFATSSEPSN(ByVal vData As Integer)
+    intPermFatSepSN = vData
+End Property
+
+Public Property Get PRODUTOS() As Variant
+    PRODUTOS = arrPRODUTOS
+End Property
+
+Public Property Let PRODUTOS(ByVal vData As Variant)
+    arrPRODUTOS = vData
+End Property
+
+Public Property Get CODREF() As String
+    CODREF = strCODREF
+End Property
+
+Public Property Let CODREF(ByVal vData As String)
+    strCODREF = vData
+End Property
+
+Public Property Get PRODUTO() As Variant
+    PRODUTO = arrPRODUTO
+End Property
+
+Public Property Let PRODUTO(ByVal vData As Variant)
+    arrPRODUTO = vData
+End Property
+
+Public Property Get OBSCOM() As String
+    OBSCOM = strOBSCOM
+End Property
+
+Public Property Let OBSCOM(ByVal vData As String)
+    strOBSCOM = vData
+End Property
+
+Public Property Get VENDEDORES() As Variant
+    VENDEDORES = arrVENDEDORES
+End Property
+
+Public Property Let VENDEDORES(ByVal vData As Variant)
+    arrVENDEDORES = vData
+End Property
+
+Public Property Get TECNICOS() As Variant
+    TECNICOS = arrTECNICOS
+End Property
+
+Public Property Let TECNICOS(ByVal vData As Variant)
+    arrTECNICOS = vData
+End Property
+
+Public Property Get TRANSP() As Variant
+    TRANSP = arrTRANSP
+End Property
+
+Public Property Let TRANSP(ByVal vData As Variant)
+    arrTRANSP = vData
+End Property
+
+Public Property Get BANCOS() As Variant
+    BANCOS = varBANCOS
+End Property
+
+Public Property Let BANCOS(ByVal vData As Variant)
+    varBANCOS = vData
+End Property
+
+Public Property Get OBS() As String
+    OBS = strOBS
+End Property
+
+Public Property Let OBS(ByVal vData As String)
+    strOBS = vData
+End Property
+
+Public Property Get CLIEJAECLI() As String
+    CLIEJAECLI = strCLIEJAECLI
+End Property
+
+Public Property Let CLIEJAECLI(ByVal vData As String)
+    strCLIEJAECLI = vData
+End Property
+
+Public Property Get EMPREATENDE() As Variant
+    EMPREATENDE = varEMPREATENDE
+End Property
+
+Public Property Let EMPREATENDE(ByVal vData As Variant)
+    varEMPREATENDE = vData
+End Property
+
+Public Property Get SISTCERTIF() As Variant
+    SISTCERTIF = varSISTCERTIF
+End Property
+
+Public Property Let SISTCERTIF(ByVal vData As Variant)
+    varSISTCERTIF = vData
+End Property
+
+Public Property Get SERTIFICADO() As String
+    SERTIFICADO = strSERTIFICADO
+End Property
+
+Public Property Let SERTIFICADO(ByVal vData As String)
+    strSERTIFICADO = vData
+End Property
+
+Public Property Get SEGMENTO() As Integer
+    SEGMENTO = intSEGMENTO
+End Property
+
+Public Property Let SEGMENTO(ByVal vData As Integer)
+    intSEGMENTO = vData
+End Property
+
+Public Property Get Modulo() As String
+    Modulo = strModulo
+End Property
+
+Public Property Let Modulo(ByVal vData As String)
+    strModulo = vData
+End Property
+
+Public Property Get MESEREAVAL() As Integer
+    MESEREAVAL = intMESEREAVAL
+End Property
+
+Public Property Let MESEREAVAL(ByVal vData As Integer)
+    intMESEREAVAL = vData
+End Property
+
+Public Property Get BLQSALACIM() As Double
+    BLQSALACIM = dblBLQSALACIM
+End Property
+
+Public Property Let BLQSALACIM(ByVal vData As Double)
+    dblBLQSALACIM = vData
+End Property
+
+Public Property Get AVISASALAC() As Double
+    AVISASALAC = dblAVISASALAC
+End Property
+
+Public Property Let AVISASALAC(ByVal vData As Double)
+    dblAVISASALAC = vData
+End Property
+
+Public Property Get VALLIMCRED() As Double
+    VALLIMCRED = dblVALLIMCRED
+End Property
+
+Public Property Let VALLIMCRED(ByVal vData As Double)
+    dblVALLIMCRED = vData
+End Property
+
+Public Property Get CEPENTREGA() As String
+    CEPENTREGA = strCEPENTREGA
+End Property
+
+Public Property Let CEPENTREGA(ByVal vData As String)
+    strCEPENTREGA = vData
+End Property
+
+Public Property Get ESTENTREGA() As Integer
+    ESTENTREGA = intESTENTREGA
+End Property
+
+Public Property Let ESTENTREGA(ByVal vData As Integer)
+    intESTENTREGA = vData
+End Property
+
+Public Property Get CIDENTREGA() As String
+    CIDENTREGA = strCIDENTREGA
+End Property
+
+Public Property Let CIDENTREGA(ByVal vData As String)
+    strCIDENTREGA = vData
+End Property
+
+Public Property Get BAIENTREGA() As String
+    BAIENTREGA = strBAIENTREGA
+End Property
+
+Public Property Let BAIENTREGA(ByVal vData As String)
+    strBAIENTREGA = vData
+End Property
+
+Public Property Get ENDENTREGA() As String
+    ENDENTREGA = strENDENTREGA
+End Property
+
+Public Property Let ENDENTREGA(ByVal vData As String)
+    strENDENTREGA = vData
+End Property
+
+Public Property Get CEPCOBRA() As String
+    CEPCOBRA = strCEPCOBRA
+End Property
+
+Public Property Let CEPCOBRA(ByVal vData As String)
+    strCEPCOBRA = vData
+End Property
+
+Public Property Get ESTCOBRA() As Integer
+    ESTCOBRA = intESTCOBRA
+End Property
+
+Public Property Let ESTCOBRA(ByVal vData As Integer)
+    intESTCOBRA = vData
+End Property
+
+Public Property Get CIDCOBRA() As String
+    CIDCOBRA = strCIDCOBRA
+End Property
+
+Public Property Let CIDCOBRA(ByVal vData As String)
+    strCIDCOBRA = vData
+End Property
+
+Public Property Get BAICOBRA() As String
+    BAICOBRA = strBAICOBRA
+End Property
+
+Public Property Let BAICOBRA(ByVal vData As String)
+    strBAICOBRA = vData
+End Property
+
+Public Property Get ENDCOBRA() As String
+    ENDCOBRA = strENDCOBRA
+End Property
+
+Public Property Let ENDCOBRA(ByVal vData As String)
+    strENDCOBRA = vData
+End Property
+
+Public Property Get BLOQAVISALD() As String
+    BLOQAVISALD = strBLOQAVISALD
+End Property
+
+Public Property Let BLOQAVISALD(ByVal vData As String)
+    strBLOQAVISALD = vData
+End Property
+
+Public Property Get SEMPRBLOQPE() As String
+    SEMPRBLOQPE = strSEMPRBLOQPE
+End Property
+
+Public Property Let SEMPRBLOQPE(ByVal vData As String)
+    strSEMPRBLOQPE = vData
+End Property
+
+Public Property Get AVISARRESTR() As String
+    AVISARRESTR = strAVISARRESTR
+End Property
+
+Public Property Let AVISARRESTR(ByVal vData As String)
+    strAVISARRESTR = vData
+End Property
+
+Public Property Let BLOQPEDREST(ByVal vData As String)
+    strBLOQPEDREST = vData
+End Property
+
+Public Property Get BLOQPEDREST() As String
+    BLOQPEDREST = strBLOQPEDREST
+End Property
+
+Public Property Get CLIENTES() As Variant
+    CLIENTES = varCLIENTES
+End Property
+
+Public Property Let CLIENTES(ByVal vData As Variant)
+    varCLIENTES = vData
+End Property
+
+Public Property Get FORNECEDORE() As Variant
+    FORNECEDORE = varFORNECEDORE
+End Property
+
+Public Property Let FORNECEDORE(ByVal vData As Variant)
+    varFORNECEDORE = vData
+End Property
+
+Public Property Get RESTRICOES() As Variant
+    RESTRICOES = varRESTRICOES
+End Property
+
+Public Property Let RESTRICOES(ByVal vData As Variant)
+    varRESTRICOES = vData
+End Property
+
+Public Property Get REFPESSOAL() As Variant
+    REFPESSOAL = varREFPESSOAL
+End Property
+
+Public Property Let REFPESSOAL(ByVal vData As Variant)
+    varREFPESSOAL = vData
+End Property
+
+Public Property Get REFCOMERC() As Variant
+    REFCOMERC = varREFCOMERC
+End Property
+
+Public Property Let REFCOMERC(ByVal vData As Variant)
+    varREFCOMERC = vData
+End Property
+
+Public Property Get REFBANCARIA() As Variant
+    REFBANCARIA = varREFBANCARIA
+End Property
+
+Public Property Let REFBANCARIA(ByVal vData As Variant)
+    varREFBANCARIA = vData
+End Property
+
+Public Property Get DATANIRC() As Date
+    DATANIRC = dtDATANIRC
+End Property
+
+Public Property Let DATANIRC(ByVal vData As Date)
+    dtDATANIRC = vData
+End Property
+
+Public Property Get CODNIRC() As String
+    CODNIRC = strCODNIRC
+End Property
+
+Public Property Let CODNIRC(ByVal vData As String)
+    strCODNIRC = vData
+End Property
+
+Public Property Get CODSUFRA() As String
+    CODSUFRA = strCODSUFRA
+End Property
+
+Public Property Let CODSUFRA(ByVal vData As String)
+    strCODSUFRA = vData
+End Property
+
+Public Property Get CADASTRO() As Date
+    CADASTRO = dtCADASTRO
+End Property
+
+Public Property Let CADASTRO(ByVal vData As Date)
+    dtCADASTRO = vData
+End Property
+
+Public Property Get CLISITE() As Variant
+    CLISITE = varCLISITE
+End Property
+
+Public Property Let CLISITE(ByVal vData As Variant)
+    varCLISITE = vData
+End Property
+
+Public Property Get CLIEMAIL() As Variant
+    CLIEMAIL = varCLIEMAIL
+End Property
+
+Public Property Let CLIEMAIL(ByVal vData As Variant)
+    varCLIEMAIL = vData
+End Property
+
+Public Property Get CLICONTATO() As Variant
+    CLICONTATO = varCLICONTATO
+End Property
+
+Public Property Let CLICONTATO(ByVal vData As Variant)
+    varCLICONTATO = vData
+End Property
+
+Public Property Get CLITELNORM() As Variant
+    CLITELNORM = varCLITELNORM
+End Property
+
+Public Property Let CLITELNORM(ByVal vData As Variant)
+    varCLITELNORM = vData
+End Property
+
+Public Property Get CLICEP() As String
+    CLICEP = strCLICEP
+End Property
+
+Public Property Let CLICEP(ByVal vData As String)
+    strCLICEP = vData
+End Property
+
+Public Property Get CLIESTADO() As Integer
+    CLIESTADO = strCLIESTADO
+End Property
+
+Public Property Let CLIESTADO(ByVal vData As Integer)
+    strCLIESTADO = vData
+End Property
+
+Public Property Get CLICIDADE() As String
+    CLICIDADE = strCLICIDADE
+End Property
+
+Public Property Let CLICIDADE(ByVal vData As String)
+    strCLICIDADE = vData
+End Property
+
+Public Property Get CLIBAIRRO() As String
+    CLIBAIRRO = strCLIBAIRRO
+End Property
+
+Public Property Let CLIBAIRRO(ByVal vData As String)
+    strCLIBAIRRO = vData
+End Property
+
+Public Property Get CLIENDEREC() As String
+    CLIENDEREC = strCLIENDEREC
+End Property
+
+Public Property Let CLIENDEREC(ByVal vData As String)
+    strCLIENDEREC = vData
+End Property
+
+Public Property Get CLIPESSOA() As String
+    CLIPESSOA = strCLIPESSOA
+End Property
+
+Public Property Let CLIPESSOA(ByVal vData As String)
+    strCLIPESSOA = vData
+End Property
+
+Public Property Get CLINOMFANT() As String
+    CLINOMFANT = strCLINOMFANT
+End Property
+
+Public Property Let CLINOMFANT(ByVal vData As String)
+    strCLINOMFANT = vData
+End Property
+
+Public Property Get CLIRGCGC() As String
+    CLIRGCGC = strCLIRGCGC
+End Property
+
+Public Property Let CLIRGCGC(ByVal vData As String)
+    strCLIRGCGC = vData
+End Property
+
+Public Property Get CLICPFCNPJ() As String
+    CLICPFCNPJ = strCLICPFCNPJ
+End Property
+
+Public Property Let CLICPFCNPJ(ByVal vData As String)
+    strCLICPFCNPJ = vData
+End Property
+
+Public Property Get CLIERZAOSO() As String
+    CLIERZAOSO = strCLIERZAOSO
+End Property
+
+Public Property Let CLIERZAOSO(ByVal vData As String)
+    strCLIERZAOSO = vData
+End Property
+
+Public Property Get CLISTATUS() As String
+    CLISTATUS = strCLISTATUS
+End Property
+
+Public Property Let CLISTATUS(ByVal vData As String)
+    strCLISTATUS = vData
+End Property
+
+Public Property Get CLIECODIGO() As Long
+    CLIECODIGO = intCLIECODIGO
+End Property
+
+Public Property Let CLIECODIGO(ByVal vData As Long)
+    intCLIECODIGO = vData
+End Property
+
+Public Sub cConnect(cCaminho As String, Linha As Variant, iFilial As Integer, strAcesso As String, strUSUARIO As String, lngIDUsuario As Long)
+    frmCADCLIENTEP.cCaminho = cCaminho
+    frmCADCLIENTEP.Linha = Linha
+    frmCADCLIENTEP.FILIAL = iFilial
+    frmCADCLIENTEP.strAcesso = strAcesso
+    frmCADCLIENTEP.strUSUARIO = strUSUARIO
+    frmCADCLIENTEP.lngIDUsuario = lngIDUsuario
+    frmCADCLIENTEP.Show vbModal
+End Sub
+
+Public Sub cConnectNovo(cCaminho As String, Linha As Variant, iFilial As Integer, strAcesso As String, strUSUARIO As String)
+    frmCADCLIENTE.cCaminho = cCaminho
+    frmCADCLIENTE.Linha = Linha
+    frmCADCLIENTE.FILIAL = iFilial
+    frmCADCLIENTE.strAcesso = strAcesso
+    frmCADCLIENTE.strUSUARIO = strUSUARIO
+    frmCADCLIENTE.cTipOper = "I"
+    frmCADCLIENTE.Show vbModal
+End Sub
+
+
+Public Property Get FILIAL() As Integer
+    FILIAL = intFILIAL
+End Property
+
+Public Property Let FILIAL(ByVal vData As Integer)
+    intFILIAL = vData
+End Property
+
+Public Function Pesq_CadCliente() As Boolean
+
+   Pesq_CadCliente = False
+   
+   sSql = ""
+   
+   sSql = "Select " & vbCrLf
+   sSql = sSql + "       * " & vbCrLf
+   sSql = sSql + "  From " & vbCrLf
+   sSql = sSql + "       SGI_CADCLIENTE " & vbCrLf
+   sSql = sSql + " Where " & vbCrLf
+   sSql = sSql + "       SGI_FILIAL = " & intFILIAL & vbCrLf
+   
+   BREC.Open sSql, adoBanco_Dados
+   If Not BREC.EOF Then Pesq_CadCliente = True
+   BREC.Close
+
+End Function
+
+
+Public Function Gera_Codigo(sModulo As String, blNumNorm As Boolean) As Long
+
+    Gera_Codigo = 1
+    
+    BGRV.ActiveConnection = adoBanco_Dados
+    
+    sSql = ""
+    
+    If blNumNorm = True Then
+       
+       sSql = "Select " & vbCrLf
+       sSql = sSql + "       (Max(SGI_NUMERO) + 1) As SGI_NUMERO " & vbCrLf
+       sSql = sSql + "  From " & vbCrLf
+       sSql = sSql + "       SGI_NUMERO " & vbCrLf
+       sSql = sSql + " Where " & vbCrLf
+       sSql = sSql + "       SGI_MODULO = '" & sModulo & "'"
+       sSql = sSql + "   And SGI_FILIAL = " & intFILIAL
+    
+       BREC.Open sSql, adoBanco_Dados
+    
+       If Not BREC.EOF Then
+    
+          If IsNull(BREC!SGI_NUMERO) = True Then
+            
+             Gera_Codigo = 1
+          
+             sSql = "Insert into SGI_NUMERO (SGI_FILIAL,SGI_NUMERO,SGI_MODULO) Values(" & vbCrLf
+             sSql = sSql + "                                              " & intFILIAL & vbCrLf
+             sSql = sSql + "                                            ,1" & vbCrLf
+             sSql = sSql + "                                            ,'" & sModulo & "'" & vbCrLf
+             sSql = sSql + "                                          )" & vbCrLf
+          
+          ElseIf BREC!SGI_NUMERO > 1 Then
+         
+             Gera_Codigo = BREC!SGI_NUMERO
+          
+             sSql = "Update SGI_NUMERO Set " & vbCrLf
+             sSql = sSql + "           SGI_NUMERO = " & BREC!SGI_NUMERO & vbCrLf
+             sSql = sSql + "         Where " & vbCrLf
+             sSql = sSql + "               SGI_MODULO = '" & sModulo & "'" & vbCrLf
+             sSql = sSql + "           And SGI_FILIAL =  " & intFILIAL
+       
+          End If
+       
+          BGRV.CommandText = sSql
+          BGRV.Execute
+       
+       
+       End If
+    
+       BREC.Close
+    
+    End If
+    
+    If blNumNorm = False Then
+    
+       sSql = "Select " & vbCrLf
+       sSql = sSql + "       (Max(SGI_NUMERO) + 1) As SGI_NUMERO " & vbCrLf
+       sSql = sSql + "  From " & vbCrLf
+       sSql = sSql + "       SGI_NUMERO " & vbCrLf
+       sSql = sSql + " Where " & vbCrLf
+       sSql = sSql + "       SGI_MODULO = '" & sModulo & "P" & "'" & vbCrLf
+       sSql = sSql + "   And SGI_FILIAL = " & intFILIAL
+    
+       BREC.Open sSql, adoBanco_Dados
+    
+       If Not BREC.EOF Then
+    
+          If IsNull(BREC!SGI_NUMERO) = True Then
+            
+             Gera_Codigo = 1000001
+                           
+             sSql = "Insert into SGI_NUMERO (SGI_FILIAL,SGI_NUMERO,SGI_MODULO) Values(" & vbCrLf
+             sSql = sSql + "                                              " & intFILIAL & vbCrLf
+             sSql = sSql + "                                            ," & Gera_Codigo & vbCrLf
+             sSql = sSql + "                                            ,'" & sModulo & "P" & "'" & vbCrLf
+             sSql = sSql + "                                          )" & vbCrLf
+          
+          ElseIf BREC!SGI_NUMERO > 1 Then
+         
+             Gera_Codigo = BREC!SGI_NUMERO
+          
+             sSql = "Update SGI_NUMERO Set " & vbCrLf
+             sSql = sSql + "           SGI_NUMERO = " & BREC!SGI_NUMERO & vbCrLf
+             sSql = sSql + "         Where " & vbCrLf
+             sSql = sSql + "               SGI_MODULO = '" & sModulo & "P" & "'" & vbCrLf
+             sSql = sSql + "           And SGI_FILIAL =  " & intFILIAL
+       
+          End If
+       
+          BGRV.CommandText = sSql
+          BGRV.Execute
+       
+       End If
+    
+       BREC.Close
+    
+    End If
+    
+End Function
+
+
+Public Function GRAVA(strOPER As String) As Boolean
+    
+On Error GoTo err_Trans
+     
+     GRAVA = False
+         
+     Dim I        As Integer
+     Dim strValor As String
+     
+     '' Inicia transação
+     adoBanco_Dados.BeginTrans
+     BGRV.ActiveConnection = adoBanco_Dados
+     
+     If strOPER = "I" Then
+        
+        '' Grava Cliente
+        sSql = "Insert Into SGI_CADCLIENTE (SGI_FILIAL,SGI_CODIGO,SGI_CPFCNPJ,SGI_RGCGC,SGI_RAZAOSOC,SGI_NOMFANTA,SGI_ENDNORM," & vbCrLf
+        sSql = sSql & "                     SGI_CIDNORM,SGI_BAINROM,SGI_ESTNORM,SGI_CEPNORM,SGI_DTCADASTRO,SGI_CODSUFRAMA,SGI_CODNIRC," & vbCrLf
+        sSql = sSql & "                     SGI_DTNIRC,SGI_PESSOA,SGI_ENDCOBRA,SGI_BAICOBRA,SGI_CIDCOBRA,SGI_ESTCOBRA,SGI_CEPCOBRA,SGI_ENDENTREGA," & vbCrLf
+        sSql = sSql & "                     SGI_BAIENTREGA,SGI_CIDENTREGA,SGI_ESTENTREGA,SGI_CEPENTREGA,SGI_RESTRBLQPED,SGI_RESTRAVISA,SGI_CREDSBLQPED," & vbCrLf
+        sSql = sSql & "                     SGI_CREDAVBLQ,SGI_VLLIMCRED,SGI_MESESREAPRO,SGI_AVISSALACIMA,SGI_BLQPEDSALACIMA,SGI_CODSEGMENTO,SGI_CERTIFICADO," & vbCrLf
+        sSql = sSql & "                     SGI_OBS,SGI_ECLIENTE,SGI_OBSCOM,SGI_CODREF,SGI_PERMFATSSEPSN,SGI_CONFENTREST,SGI_VISTELENTEST,SGI_DESBCLIE" & vbCrLf
+       
+        sSql = sSql & "                     ) Values (" & vbCrLf
+        
+        sSql = sSql & "                            " & intFILIAL & vbCrLf
+        sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+        sSql = sSql & "                           ,'" & strCLICPFCNPJ & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCLIRGCGC & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCLIERZAOSO & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCLINOMFANT & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCLIENDEREC & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCLICIDADE & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCLIBAIRRO & "'" & vbCrLf
+        sSql = sSql & "                           ," & strCLIESTADO & vbCrLf
+        sSql = sSql & "                           ,'" & strCLICEP & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & Format(dtCADASTRO, "MM/DD/YYYY") & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCODSUFRA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCODNIRC & "'" & vbCrLf
+        If dtDATANIRC <> CDate("31/12/1899") Then
+           sSql = sSql & "                           ,'" & Format(dtDATANIRC, "MM/DD/YYYY") & "'" & vbCrLf
+        Else
+           sSql = sSql & "                           ,Null" & vbCrLf
+        End If
+        sSql = sSql & "                           ,'" & strCLIPESSOA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strENDCOBRA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strBAICOBRA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCIDCOBRA & "'" & vbCrLf
+        sSql = sSql & "                           ," & intESTCOBRA & vbCrLf
+        sSql = sSql & "                           ,'" & strCEPCOBRA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strENDENTREGA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strBAIENTREGA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCIDENTREGA & "'" & vbCrLf
+        sSql = sSql & "                           ," & intESTENTREGA & vbCrLf
+        sSql = sSql & "                           ,'" & strCEPENTREGA & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strBLOQPEDREST & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strAVISARRESTR & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strSEMPRBLOQPE & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strBLOQAVISALD & "'" & vbCrLf
+        
+        strValor = Replace(Str(dblVALLIMCRED), ".", "")
+        strValor = Replace(strValor, ",", ".")
+        sSql = sSql & "                           ," & strValor & vbCrLf
+        sSql = sSql & "                           ," & intMESEREAVAL & vbCrLf
+        
+        strValor = Replace(Str(dblAVISASALAC), ".", "")
+        strValor = Replace(strValor, ",", ".")
+        sSql = sSql & "                           ," & strValor & vbCrLf
+        
+        strValor = Replace(Str(dblBLQSALACIM), ".", "")
+        strValor = Replace(strValor, ",", ".")
+        sSql = sSql & "                           ," & strValor & vbCrLf
+        sSql = sSql & "                           ," & intSEGMENTO & vbCrLf
+        sSql = sSql & "                           ,'" & strSERTIFICADO & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strOBS & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCLIEJAECLI & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strOBSCOM & "'" & vbCrLf
+        sSql = sSql & "                           ,'" & strCODREF & "'" & vbCrLf
+        sSql = sSql & "                           ," & intPermFatSepSN & vbCrLf
+        sSql = sSql & "                           ," & intNECCONFEST & vbCrLf
+        sSql = sSql & "                           ," & intVISTELEST & vbCrLf
+        sSql = sSql & "                           ," & intDESBCLIE & vbCrLf
+
+        sSql = sSql & "                           )"
+        
+        BGRV.CommandText = sSql
+        BGRV.Execute
+        
+        ' Gravando Telefone
+        If IsArray(varCLITELNORM) = True Then
+           For I = 0 To UBound(varCLITELNORM)
+               sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLITELNORM(I, 2) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLITELNORM(I, 1) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Contato
+        If IsArray(varCLICONTATO) = True Then
+           For I = 0 To UBound(varCLICONTATO)
+               sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLICONTATO(I, 2) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLICONTATO(I, 1) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando E-MAIL
+        If IsArray(varCLIEMAIL) = True Then
+           For I = 0 To UBound(varCLIEMAIL)
+               sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLIEMAIL(I, 2) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLIEMAIL(I, 1) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando SITE
+        If IsArray(varCLISITE) = True Then
+           For I = 0 To UBound(varCLISITE)
+               sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLISITE(I, 2) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & varCLISITE(I, 1) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Bancos
+        If IsArray(varBANCOS) = True Then
+           For I = 1 To UBound(varBANCOS)
+               sSql = "Insert Into SGI_CADBCOCLI (SGI_FILIAL,SGI_CODIGO,SGI_CODBANCO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ," & varBANCOS(I) & vbCrLf
+               sSql = sSql & "                           )"
+        
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Referencia Bancaria
+        If IsArray(varREFBANCARIA) = True Then
+           For I = 1 To UBound(varREFBANCARIA)
+               sSql = "Insert Into SGI_REFBANCARIA (SGI_FILIAL,SGI_CODIGO,SGI_REFBANCO,SGI_REFNOME,SGI_REFTEL) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFBANCARIA(I, 1)) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFBANCARIA(I, 2)) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFBANCARIA(I, 3)) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+        
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Referencia Comercial
+        If IsArray(varREFCOMERC) = True Then
+           For I = 1 To UBound(varREFCOMERC)
+               sSql = "Insert Into SGI_REFCOMERCIAL (SGI_FILIAL,SGI_CODIGO,SGI_REFCOMERC,SGI_REFCOMNOM,SGI_REFCOMTEL) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFCOMERC(I, 1)) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFCOMERC(I, 2)) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFCOMERC(I, 3)) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+        
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Referencia Pessoal
+        If IsArray(varREFPESSOAL) = True Then
+           For I = 1 To UBound(varREFPESSOAL)
+               sSql = "Insert Into SGI_REFPESSOAL (SGI_FILIAL,SGI_CODIGO,SGI_REFPESSOAL,SGI_REFTELEFONE) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFPESSOAL(I, 1)) & "'" & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varREFPESSOAL(I, 2)) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+        
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Restricoes
+        If IsArray(varRESTRICOES) = True Then
+           For I = 1 To UBound(varRESTRICOES)
+               sSql = "Insert Into SGI_RESTRICOES (SGI_FILIAL,SGI_CODIGO,SGI_TEXTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varRESTRICOES(I)) & "'" & vbCrLf
+               sSql = sSql & "                           )"
+        
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Fornecedores
+        If IsArray(varFORNECEDORE) = True Then
+           For I = 1 To UBound(varFORNECEDORE)
+               sSql = "Insert Into SGI_CLIFORNEC (SGI_FILIAL,SGI_CODIGO,SGI_FORNEC,SGI_DESDE) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varFORNECEDORE(I, 1)) & "'" & vbCrLf
+               If Len(Trim(varFORNECEDORE(I, 2))) > 0 Then
+                  sSql = sSql & "                           ,'" & Format(CDate(varFORNECEDORE(I, 2)), "MM/DD/YYYY") & "'" & vbCrLf
+               Else
+                  sSql = sSql & "                           ,Null" & vbCrLf
+               End If
+               sSql = sSql & "                           )"
+        
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando Clientes
+        If IsArray(varCLIENTES) = True Then
+           For I = 1 To UBound(varCLIENTES)
+               sSql = "Insert Into SGI_CLIECLIENTES (SGI_FILIAL,SGI_CODIGO,SGI_CLIENTE,SGI_DESDE) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(varCLIENTES(I, 1)) & "'" & vbCrLf
+               If Len(Trim(varCLIENTES(I, 2))) > 0 Then
+                  sSql = sSql & "                           ,'" & Format(CDate(varCLIENTES(I, 2)), "MM/DD/YYYY") & "'" & vbCrLf
+               Else
+                  sSql = sSql & "                           ,Null" & vbCrLf
+               End If
+               sSql = sSql & "                           )"
+        
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        '' Sistema de Certificação
+        If IsArray(varSISTCERTIF) = True Then
+           For I = 1 To UBound(varSISTCERTIF)
+               sSql = "Insert into SGI_CLISISCERT (SGI_FILIAL,SGI_CODIGO,SGI_DESCRICAO) " & vbCrLf
+               sSql = sSql & "             Values (" & vbCrLf
+               sSql = sSql & "                    " & intFILIAL & vbCrLf
+               sSql = sSql & "                   ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                   ,'" & varSISTCERTIF(I) & "'" & vbCrLf
+               sSql = sSql & "                     )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        '' Empresas que atende este cliente
+        If IsArray(varEMPREATENDE) = True Then
+           For I = 1 To UBound(varEMPREATENDE)
+               sSql = "Insert into SGI_CLIATENDIDO (SGI_FILIAL,SGI_CODIGO,SGI_DESCRICAO,SGI_CODSEG) " & vbCrLf
+               sSql = sSql & "             Values ( " & vbCrLf
+               sSql = sSql & "                    " & intFILIAL & vbCrLf
+               sSql = sSql & "                   ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                   ,'" & varEMPREATENDE(I, 1) & "'" & vbCrLf
+               sSql = sSql & "                   ," & varEMPREATENDE(I, 2) & vbCrLf
+               sSql = sSql & "                    )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        '' Grava Transportadoras
+        If IsArray(arrTRANSP) = True Then
+           For I = 1 To UBound(arrTRANSP)
+               sSql = "Insert Into SGI_CLITRANSP (SGI_FILIAL,SGI_CODIGO,SGI_CODTRANSP) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ," & arrTRANSP(I) & vbCrLf
+               sSql = sSql & "                           )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        ' Gravando PRODUTO
+        If IsArray(arrPRODUTO) = True Then
+           For I = 1 To UBound(arrPRODUTO)
+               sSql = "Insert Into SGI_PRODCLI (SGI_FILIAL,SGI_CODIGO,SGI_PRODUTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(arrPRODUTO(I)) & "')" & vbCrLf
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        
+        '' Gravando Produtos Dos Clientes
+        If IsArray(arrPRODUTOS) = True Then
+           For I = 1 To UBound(arrPRODUTOS)
+               sSql = "Insert Into SGI_PRODCLIE (SGI_FILIAL,SGI_CODIGO,SGI_PRODUTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ," & Trim(arrPRODUTOS(I, 1)) & vbCrLf
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+        
+        '' Gravando Condições de Pagamento do Cliente
+        If IsArray(arrCONDPGTOCLIE) Then
+            For I = 1 To UBound(arrCONDPGTOCLIE)
+                sSql = ""
+                
+                sSql = "Insert Into SGI_CONDPGTOCLIE (" & vbCrLf
+                sSql = sSql & "                              SGI_FILIAL" & vbCrLf
+                sSql = sSql & "                             ,SGI_CODIGO" & vbCrLf
+                sSql = sSql & "                             ,SGI_CODCONDPGTO" & vbCrLf
+                sSql = sSql & "                    ) Values (" & vbCrLf
+                sSql = sSql & "                              " & intFILIAL & vbCrLf
+                sSql = sSql & "                             ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                             ," & arrCONDPGTOCLIE(I, 1) & vbCrLf
+                sSql = sSql & "                             )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+                
+            Next I
+        End If
+        
+     ElseIf strOPER = "A" Then
+     
+         '' --------------------------------------------------------
+         '' Apagando Transportadora do Cliente
+         sSql = "Delete from SGI_CLITRANSP " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         '' ---------------------------------------------------
+         '' Apaga Dados Telefone
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboTELNORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Dados Contato
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboCONTNORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga E-MAIL
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboEMAILNORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga SITE
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboSITENORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Bancos
+         sSql = "Delete from SGI_CADBCOCLI " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Referencia bancaria
+         sSql = "Delete from SGI_REFBANCARIA " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Referencia comercial
+         sSql = "Delete from SGI_REFCOMERCIAL " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Referencia pessoal
+         sSql = "Delete from SGI_REFPESSOAL " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga restrições
+         sSql = "Delete from SGI_RESTRICOES " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Fornecedores do Cliente
+         sSql = "Delete from SGI_CLIFORNEC " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Clientes do cliente
+         sSql = "Delete from SGI_CLIECLIENTES " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Sistema de certificação
+         sSql = "Delete from SGI_CLISISCERT " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga empresas que atente este cliente
+         sSql = "Delete from SGI_CLIATENDIDO " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         '' --------------------------------------------------------
+         '' Apagando Produtos do Cliente
+         sSql = "Delete from SGI_PRODCLI " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         '' --------------------------------------------------------
+         '' Apagando Produtos do Cliente
+         sSql = "Delete from SGI_PRODCLIE " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         
+         '' Apagando Condições de Pagamento do Cliente
+         sSql = "Delete from SGI_CONDPGTOCLIE " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         
+         '' Alterando dados
+         '' Grava Cliente
+         sSql = "Update SGI_CADCLIENTE Set " & vbCrLf
+         
+         sSql = sSql & "                            SGI_CPFCNPJ     = '" & strCLICPFCNPJ & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_RGCGC       = '" & strCLIRGCGC & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_RAZAOSOC    = '" & strCLIERZAOSO & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_NOMFANTA    = '" & strCLINOMFANT & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_ENDNORM     = '" & strCLIENDEREC & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CIDNORM     = '" & strCLICIDADE & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_BAINROM     = '" & strCLIBAIRRO & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_ESTNORM     =  " & strCLIESTADO & vbCrLf
+         sSql = sSql & "                           ,SGI_CEPNORM     = '" & strCLICEP & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CODSUFRAMA  = '" & strCODSUFRA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CODNIRC     = '" & strCODNIRC & "'" & vbCrLf
+         If dtDATANIRC <> CDate("31/12/1899") Then
+            sSql = sSql & "                           ,SGI_DTNIRC = '" & Format(dtDATANIRC, "MM/DD/YYYY") & "'" & vbCrLf
+         Else
+            sSql = sSql & "                           ,SGI_DTNIRC = Null" & vbCrLf
+         End If
+         sSql = sSql & "                           ,SGI_PESSOA      = '" & strCLIPESSOA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_ENDCOBRA    = '" & strENDCOBRA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_BAICOBRA    = '" & strBAICOBRA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CIDCOBRA    = '" & strCIDCOBRA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_ESTCOBRA    =  " & intESTCOBRA & vbCrLf
+         sSql = sSql & "                           ,SGI_CEPCOBRA    = '" & strCEPCOBRA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_ENDENTREGA  = '" & strENDENTREGA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_BAIENTREGA  = '" & strBAIENTREGA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CIDENTREGA  = '" & strCIDENTREGA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_ESTENTREGA  =  " & intESTENTREGA & vbCrLf
+         sSql = sSql & "                           ,SGI_CEPENTREGA  = '" & strCEPENTREGA & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_RESTRBLQPED = '" & strBLOQPEDREST & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_RESTRAVISA  = '" & strAVISARRESTR & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CREDSBLQPED = '" & strSEMPRBLOQPE & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CREDAVBLQ   = '" & strBLOQAVISALD & "'" & vbCrLf
+         
+         strValor = Replace(Str(dblVALLIMCRED), ".", "")
+         strValor = Replace(strValor, ",", ".")
+         sSql = sSql & "                           ,SGI_VLLIMCRED   = " & strValor & vbCrLf
+         sSql = sSql & "                           ,SGI_MESESREAPRO = " & intMESEREAVAL & vbCrLf
+         
+         strValor = Replace(Str(dblAVISASALAC), ".", "")
+         strValor = Replace(strValor, ",", ".")
+         sSql = sSql & "                           ,SGI_AVISSALACIMA = " & strValor & vbCrLf
+        
+         strValor = Replace(Str(dblBLQSALACIM), ".", "")
+         strValor = Replace(strValor, ",", ".")
+         sSql = sSql & "                           ,SGI_BLQPEDSALACIMA =  " & strValor & vbCrLf
+         
+         sSql = sSql & "                           ,SGI_CODSEGMENTO    =  " & intSEGMENTO & vbCrLf
+         sSql = sSql & "                           ,SGI_CERTIFICADO    = '" & strSERTIFICADO & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_OBS            = '" & strOBS & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_ECLIENTE       = '" & strCLIEJAECLI & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_OBSCOM         = '" & strOBSCOM & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_CODREF         = '" & strCODREF & "'" & vbCrLf
+         sSql = sSql & "                           ,SGI_PERMFATSSEPSN  = " & intPermFatSepSN & vbCrLf
+         sSql = sSql & "                           ,SGI_CONFENTREST    = " & intNECCONFEST & vbCrLf
+         sSql = sSql & "                           ,SGI_VISTELENTEST   = " & intVISTELEST & vbCrLf
+         sSql = sSql & "                           ,SGI_DESBCLIE       = " & intDESBCLIE & vbCrLf
+         
+         sSql = sSql & " Where " & vbCrLf
+         sSql = sSql & "       SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "   And SGI_CODIGO = " & intCLIECODIGO
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         ' Gravando Telefone
+         If IsArray(varCLITELNORM) = True Then
+            For I = 0 To UBound(varCLITELNORM)
+                sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLITELNORM(I, 2) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLITELNORM(I, 1) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Contato
+         If IsArray(varCLICONTATO) = True Then
+            For I = 0 To UBound(varCLICONTATO)
+                sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLICONTATO(I, 2) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLICONTATO(I, 1) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando E-MAIL
+         If IsArray(varCLIEMAIL) = True Then
+            For I = 0 To UBound(varCLIEMAIL)
+                sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLIEMAIL(I, 2) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLIEMAIL(I, 1) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando SITE
+         If IsArray(varCLISITE) = True Then
+            For I = 0 To UBound(varCLISITE)
+                sSql = "Insert Into SGI_DADOSGERAIS (SGI_FILIAL,SGI_CODIGO,SGI_MODULO,SGI_CONTROLE,SGI_TEXTO) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & strModulo & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLISITE(I, 2) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & varCLISITE(I, 1) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Bancos
+         If IsArray(varBANCOS) = True Then
+            For I = 1 To UBound(varBANCOS)
+                sSql = "Insert Into SGI_CADBCOCLI (SGI_FILIAL,SGI_CODIGO,SGI_CODBANCO) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ," & varBANCOS(I) & vbCrLf
+                sSql = sSql & "                           )"
+         
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Referencia Bancaria
+         If IsArray(varREFBANCARIA) = True Then
+            For I = 1 To UBound(varREFBANCARIA)
+                sSql = "Insert Into SGI_REFBANCARIA (SGI_FILIAL,SGI_CODIGO,SGI_REFBANCO,SGI_REFNOME,SGI_REFTEL) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFBANCARIA(I, 1)) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFBANCARIA(I, 2)) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFBANCARIA(I, 3)) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+        
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Referencia Comercial
+         If IsArray(varREFCOMERC) = True Then
+            For I = 1 To UBound(varREFCOMERC)
+                sSql = "Insert Into SGI_REFCOMERCIAL (SGI_FILIAL,SGI_CODIGO,SGI_REFCOMERC,SGI_REFCOMNOM,SGI_REFCOMTEL) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFCOMERC(I, 1)) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFCOMERC(I, 2)) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFCOMERC(I, 3)) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+         
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Referencia Pessoal
+         If IsArray(varREFPESSOAL) = True Then
+            For I = 1 To UBound(varREFPESSOAL)
+                sSql = "Insert Into SGI_REFPESSOAL (SGI_FILIAL,SGI_CODIGO,SGI_REFPESSOAL,SGI_REFTELEFONE) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFPESSOAL(I, 1)) & "'" & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varREFPESSOAL(I, 2)) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+         
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Restricoes
+         If IsArray(varRESTRICOES) = True Then
+            For I = 1 To UBound(varRESTRICOES)
+                sSql = "Insert Into SGI_RESTRICOES (SGI_FILIAL,SGI_CODIGO,SGI_TEXTO) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varRESTRICOES(I)) & "'" & vbCrLf
+                sSql = sSql & "                           )"
+         
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Fornecedores
+         If IsArray(varFORNECEDORE) = True Then
+            For I = 1 To UBound(varFORNECEDORE)
+                sSql = "Insert Into SGI_CLIFORNEC (SGI_FILIAL,SGI_CODIGO,SGI_FORNEC,SGI_DESDE) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varFORNECEDORE(I, 1)) & "'" & vbCrLf
+                If Len(Trim(varFORNECEDORE(I, 2))) > 0 Then
+                   sSql = sSql & "                           ,'" & Format(CDate(varFORNECEDORE(I, 2)), "MM/DD/YYYY") & "'" & vbCrLf
+                Else
+                   sSql = sSql & "                           ,Null" & vbCrLf
+                End If
+                sSql = sSql & "                           )"
+         
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         ' Gravando Clientes
+         If IsArray(varCLIENTES) = True Then
+            For I = 1 To UBound(varCLIENTES)
+                sSql = "Insert Into SGI_CLIECLIENTES (SGI_FILIAL,SGI_CODIGO,SGI_CLIENTE,SGI_DESDE) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ,'" & Trim(varCLIENTES(I, 1)) & "'" & vbCrLf
+                If Len(Trim(varCLIENTES(I, 2))) > 0 Then
+                   sSql = sSql & "                           ,'" & Format(CDate(varCLIENTES(I, 2)), "MM/DD/YYYY") & "'" & vbCrLf
+                Else
+                   sSql = sSql & "                           ,Null" & vbCrLf
+                End If
+                sSql = sSql & "                           )"
+         
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         '' Sistema de Certificação
+         If IsArray(varSISTCERTIF) = True Then
+            For I = 1 To UBound(varSISTCERTIF)
+                sSql = "Insert into SGI_CLISISCERT (SGI_FILIAL,SGI_CODIGO,SGI_DESCRICAO) " & vbCrLf
+                sSql = sSql & "             Values (" & vbCrLf
+                sSql = sSql & "                    " & intFILIAL & vbCrLf
+                sSql = sSql & "                   ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                   ,'" & varSISTCERTIF(I) & "'" & vbCrLf
+                sSql = sSql & "                     )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         '' Empresas que atende este cliente
+         If IsArray(varEMPREATENDE) = True Then
+            For I = 1 To UBound(varEMPREATENDE)
+                sSql = "Insert into SGI_CLIATENDIDO (SGI_FILIAL,SGI_CODIGO,SGI_DESCRICAO,SGI_CODSEG) " & vbCrLf
+                sSql = sSql & "             Values ( " & vbCrLf
+                sSql = sSql & "                    " & intFILIAL & vbCrLf
+                sSql = sSql & "                   ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                   ,'" & varEMPREATENDE(I, 1) & "'" & vbCrLf
+                sSql = sSql & "                   ," & varEMPREATENDE(I, 2) & vbCrLf
+                sSql = sSql & "                    )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+         '' Grava Transportadoras
+         If IsArray(arrTRANSP) = True Then
+            For I = 1 To UBound(arrTRANSP)
+                sSql = "Insert Into SGI_CLITRANSP (SGI_FILIAL,SGI_CODIGO,SGI_CODTRANSP) Values (" & vbCrLf
+                sSql = sSql & "                            " & intFILIAL & vbCrLf
+                sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                           ," & arrTRANSP(I) & vbCrLf
+                sSql = sSql & "                           )"
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+            Next I
+         End If
+        ' Gravando PRODUTO
+        If IsArray(arrPRODUTO) = True Then
+           For I = 1 To UBound(arrPRODUTO)
+               sSql = "Insert Into SGI_PRODCLI (SGI_FILIAL,SGI_CODIGO,SGI_PRODUTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ,'" & Trim(arrPRODUTO(I)) & "')" & vbCrLf
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+     
+        '' Gravando Produtos Dos Clientes
+        If IsArray(arrPRODUTOS) = True Then
+           For I = 1 To UBound(arrPRODUTOS)
+               sSql = "Insert Into SGI_PRODCLIE (SGI_FILIAL,SGI_CODIGO,SGI_IDPRODUTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & intCLIECODIGO & vbCrLf
+               sSql = sSql & "                           ," & Trim(arrPRODUTOS(I, 1)) & vbCrLf
+               sSql = sSql & "                            )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+     
+        '' Gravando Condições de Pagamento do Cliente
+        If IsArray(arrCONDPGTOCLIE) Then
+            For I = 1 To UBound(arrCONDPGTOCLIE)
+                sSql = ""
+                
+                sSql = "Insert Into SGI_CONDPGTOCLIE (" & vbCrLf
+                sSql = sSql & "                              SGI_FILIAL" & vbCrLf
+                sSql = sSql & "                             ,SGI_CODIGO" & vbCrLf
+                sSql = sSql & "                             ,SGI_CODCONDPGTO" & vbCrLf
+                sSql = sSql & "                    ) Values (" & vbCrLf
+                sSql = sSql & "                              " & intFILIAL & vbCrLf
+                sSql = sSql & "                             ," & intCLIECODIGO & vbCrLf
+                sSql = sSql & "                             ," & arrCONDPGTOCLIE(I, 1)
+                sSql = sSql & "                              )" & vbCrLf
+                
+                BGRV.CommandText = sSql
+                BGRV.Execute
+                
+            Next I
+        End If
+     
+     ElseIf strOPER = "E" Then
+     
+         '' --------------------------------------------------------
+         '' Apagando Produtos do Cliente
+         sSql = "Delete from SGI_PRODCLIE " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         '' --------------------------------------------------------
+         '' Apaga Transportadora
+         sSql = "Delete from SGI_CLITRANSP " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+        
+         '' ---------------------------------------------------
+         '' Apaga Dados Telefone
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboTELNORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Dados Contato
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboCONTNORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga E-MAIL
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboEMAILNORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga SITE
+         sSql = "Delete from SGI_DADOSGERAIS " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL   = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+         sSql = sSql & "        And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+         sSql = sSql & "        And SGI_CONTROLE = 'cboSITENORM'"
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Bancos
+         sSql = "Delete from SGI_CADBCOCLI " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Referencia bancaria
+         sSql = "Delete from SGI_REFBANCARIA " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Referencia comercial
+         sSql = "Delete from SGI_REFCOMERCIAL " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Referencia pessoal
+         sSql = "Delete from SGI_REFPESSOAL " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga restrições
+         sSql = "Delete from SGI_RESTRICOES " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Fornecedores do Cliente
+         sSql = "Delete from SGI_CLIFORNEC " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Clientes do cliente
+         sSql = "Delete from SGI_CLIECLIENTES " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga Sistema de certificação
+         sSql = "Delete from SGI_CLISISCERT " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         '' ---------------------------------------------------
+         '' Apaga empresas que atente este cliente
+         sSql = "Delete from SGI_CLIATENDIDO " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         '' --------------------------------------------------------
+         '' Apagando Produtos do Cliente
+         sSql = "Delete from SGI_PRODCLI " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         '' --------------------------------------------------------
+         '' Apagando Condições de Pagamento do Cliente
+         sSql = "Delete from SGI_CONDPGTOCLIE " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+         
+         '' ---------------------------------------------------
+         '' Apaga Cliente
+         sSql = "Delete from SGI_CADCLIENTE " & vbCrLf
+         sSql = sSql & "      Where " & vbCrLf
+         sSql = sSql & "            SGI_FILIAL = " & intFILIAL & vbCrLf
+         sSql = sSql & "        And SGI_CODIGO = " & intCLIECODIGO
+         
+         BGRV.CommandText = sSql
+         BGRV.Execute
+        
+     
+     ElseIf strOPER = "IP" Then
+     
+         '' --------------------------------------------------------
+         '' Apagando Produtos do Cliente
+         sSql = "Delete from SGI_PRODCLIE " & vbCrLf
+         sSql = sSql & "      Where SGI_FILIAL = " & intFILIAL
+        
+         BGRV.CommandText = sSql
+         BGRV.Execute
+     
+     
+        '' Gravando Produtos Dos Clientes
+        If IsArray(arrPRODUTOS) = True Then
+           For I = 1 To UBound(arrPRODUTOS)
+           
+               sSql = ""
+           
+               sSql = "Insert Into SGI_PRODCLIE (SGI_FILIAL,SGI_CODIGO,SGI_IDPRODUTO) Values (" & vbCrLf
+               sSql = sSql & "                            " & intFILIAL & vbCrLf
+               sSql = sSql & "                           ," & Trim(arrPRODUTOS(I, 1)) & vbCrLf
+               sSql = sSql & "                           ," & Trim(arrPRODUTOS(I, 2)) & vbCrLf
+               sSql = sSql & "                             )"
+               
+               BGRV.CommandText = sSql
+               BGRV.Execute
+           Next I
+        End If
+     
+     
+     End If
+     
+     adoBanco_Dados.CommitTrans
+     
+     GRAVA = True
+     
+     Exit Function
+
+err_Trans:
+     
+     adoBanco_Dados.RollbackTrans
+     
+     Dim objErro    As Object
+     Set objErro = CreateObject("BLBCWS.clsFuncoes")
+     Call objErro.Sub_DescErro(Str(Err.Number), Err.Description, strOPER, sSql)
+     Set objErro = Nothing
+
+End Function
+
+
+Public Sub PreenchComboSegmento(Combo As Variant)
+
+    Combo.Clear
+    
+    sSql = "Select " & vbCrLf
+    sSql = sSql & "       *  " & vbCrLf
+    sSql = sSql & "  from " & vbCrLf
+    sSql = sSql & "       SGI_CADSEGCLI " & vbCrLf
+    sSql = sSql & "Where " & vbCrLf
+    sSql = sSql & "      SGI_FILIAL = " & intFILIAL & vbCrLf
+    sSql = sSql & "Order by SGI_CODIGO"
+    
+    BREC.Open sSql, adoBanco_Dados, adOpenDynamic
+    
+    Do While Not BREC.EOF
+       Combo.AddItem Trim(BREC!SGI_DESCRICAO)
+       Combo.ItemData(Combo.NewIndex) = BREC!SGI_CODIGO
+       BREC.MoveNext
+    Loop
+    
+    If Combo.ListCount > 0 Then Combo.ListIndex = 0
+    
+    BREC.Close
+
+End Sub
+
+
+Public Function Carrega_campos() As Boolean
+
+   Carrega_campos = False
+   
+   Dim intReg As Integer
+   Dim I      As Integer
+   
+   sSql = ""
+   
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_CADCLIENTE " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_CODIGO = " & intCLIECODIGO & vbCrLf
+   sSql = sSql & "   And SGI_FILIAL = " & intFILIAL
+   
+   BREC.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC.EOF Then
+      
+      intCLIECODIGO = BREC!SGI_CODIGO
+      strCLISTATUS = ""
+      strCLIERZAOSO = BREC!SGI_RAZAOSOC
+      If Not IsNull(BREC!SGI_CPFCNPJ) Then strCLICPFCNPJ = BREC!SGI_CPFCNPJ
+      strCLIRGCGC = BREC!SGI_RGCGC
+      strCLINOMFANT = BREC!SGI_NOMFANTA
+      strCLIPESSOA = BREC!SGI_PESSOA
+      strCLIENDEREC = BREC!SGI_ENDNORM
+      strCLIBAIRRO = BREC!SGI_BAINROM
+      strCLICIDADE = BREC!SGI_CIDNORM
+      strCLIESTADO = BREC!SGI_ESTNORM
+      strCLICEP = BREC!SGI_CEPNORM
+      If Not IsNull(BREC!SGI_CODREF) Then strCODREF = Trim(BREC!SGI_CODREF)
+     
+      dtCADASTRO = BREC!SGI_DTCADASTRO
+      strCODSUFRA = BREC!SGI_CODSUFRAMA
+      strCODNIRC = BREC!SGI_CODNIRC
+      dtDATANIRC = BREC!SGI_DTNIRC
+      
+      strENDCOBRA = BREC!SGI_ENDCOBRA
+      strBAICOBRA = BREC!SGI_BAICOBRA
+      strCIDCOBRA = BREC!SGI_CIDCOBRA
+      intESTCOBRA = BREC!SGI_ESTCOBRA
+      strCEPCOBRA = BREC!SGI_CEPCOBRA
+      
+      strENDENTREGA = BREC!SGI_ENDENTREGA
+      strBAIENTREGA = BREC!SGI_BAIENTREGA
+      strCIDENTREGA = BREC!SGI_CIDENTREGA
+      intESTENTREGA = BREC!SGI_ESTENTREGA
+      strCEPENTREGA = BREC!SGI_CEPENTREGA
+      
+      strBLOQPEDREST = BREC!SGI_RESTRBLQPED
+      strAVISARRESTR = BREC!SGI_RESTRAVISA
+      
+      dblVALLIMCRED = BREC!SGI_VLLIMCRED
+      dblAVISASALAC = BREC!SGI_AVISSALACIMA
+      dblBLQSALACIM = BREC!SGI_BLQPEDSALACIMA
+      intMESEREAVAL = BREC!SGI_MESESREAPRO
+       
+      strSEMPRBLOQPE = BREC!SGI_CREDSBLQPED
+      strBLOQAVISALD = BREC!SGI_CREDAVBLQ
+      
+      intDESBCLIE = BREC!SGI_DESBCLIE
+      
+      
+      If Not IsNull(BREC!SGI_CODSEGMENTO) Then intSEGMENTO = BREC!SGI_CODSEGMENTO
+      If Not IsNull(BREC!SGI_CERTIFICADO) Then strSERTIFICADO = BREC!SGI_CERTIFICADO
+      
+      If Not IsNull(BREC!SGI_OBS) Then strOBS = BREC!SGI_OBS
+      
+      If Not IsNull(BREC!SGI_ECLIENTE) Then strCLIEJAECLI = BREC!SGI_ECLIENTE
+      
+      If Not IsNull(BREC!SGI_OBSCOM) Then strOBSCOM = BREC!SGI_OBSCOM
+      
+      If Not IsNull(BREC!SGI_PERMFATSSEPSN) Then intPermFatSepSN = BREC!SGI_PERMFATSSEPSN
+      
+      If Not IsNull(BREC!SGI_DATULTFATNOVA) Then strDTULTFATNOVA = Format(BREC!SGI_DATULTFATNOVA, "DD/MM/YYYY")
+      If Not IsNull(BREC!SGI_DATULTFATSTEEL) Then strDTULTFATSTEEL = Format(BREC!SGI_DATULTFATSTEEL, "DD/MM/YYYY")
+      
+      intNECCONFEST = BREC!SGI_CONFENTREST
+      
+      intVISTELEST = BREC!SGI_VISTELENTEST
+      
+      Carrega_campos = True
+   End If
+   
+   BREC.Close
+
+   If Carrega_campos = False Then Exit Function
+   
+   '' ------------------------------------------------------------
+   '' Telefone
+   BREC2.ActiveConnection = adoBanco_Dados
+   
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_DADOSGERAIS " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   sSql = sSql & "   And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+   sSql = sSql & "   And SGI_CONTROLE = 'cboTELNORM'" & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varCLITELNORM(1 To intReg)
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varCLITELNORM(intReg) = BREC2!SGI_TEXTO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   '' ------------------------------------------------------------
+   '' Contato
+   
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_DADOSGERAIS " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   sSql = sSql & "   And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+   sSql = sSql & "   And SGI_CONTROLE = 'cboCONTNORM'" & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varCLICONTATO(1 To intReg)
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varCLICONTATO(intReg) = BREC2!SGI_TEXTO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' ------------------------------------------------------------
+   '' E-MAIL
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_DADOSGERAIS " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   sSql = sSql & "   And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+   sSql = sSql & "   And SGI_CONTROLE = 'cboEMAILNORM'" & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varCLIEMAIL(1 To intReg)
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varCLIEMAIL(intReg) = BREC2!SGI_TEXTO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' ------------------------------------------------------------
+   '' SITE
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_DADOSGERAIS " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   sSql = sSql & "   And SGI_MODULO   = '" & strModulo & "'" & vbCrLf
+   sSql = sSql & "   And SGI_CONTROLE = 'cboSITENORM'" & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varCLISITE(1 To intReg)
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varCLISITE(intReg) = BREC2!SGI_TEXTO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' -- Bancos
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_CADBCOCLI " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varBANCOS(1 To intReg) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varBANCOS(intReg) = Str(BREC2!SGI_CODBANCO)
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' ---------------------------------------------------------
+   '' Referencias
+   
+   '' -- Bancaria
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_REFBANCARIA " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varREFBANCARIA(1 To intReg, 1 To 3) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varREFBANCARIA(intReg, 1) = BREC2!SGI_REFBANCO
+         varREFBANCARIA(intReg, 2) = BREC2!SGI_REFNOME
+         varREFBANCARIA(intReg, 3) = BREC2!SGI_REFTEL
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' -- Comercial
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_REFCOMERCIAL " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varREFCOMERC(1 To intReg, 1 To 3) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varREFCOMERC(intReg, 1) = BREC2!SGI_REFCOMERC
+         varREFCOMERC(intReg, 2) = BREC2!SGI_REFCOMNOM
+         varREFCOMERC(intReg, 3) = BREC2!SGI_REFCOMTEL
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' -- Pessoal
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "      SGI_REFPESSOAL " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varREFPESSOAL(1 To intReg, 1 To 2) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varREFPESSOAL(intReg, 1) = BREC2!SGI_REFPESSOAL
+         varREFPESSOAL(intReg, 2) = BREC2!SGI_REFTELEFONE
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' Restricoes
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "      SGI_RESTRICOES " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varRESTRICOES(1 To intReg) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varRESTRICOES(intReg) = BREC2!SGI_TEXTO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' --------------------------------------------
+   '' Fornecedores
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "      SGI_CLIFORNEC " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varFORNECEDORE(1 To intReg, 1 To 2) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varFORNECEDORE(intReg, 1) = BREC2!SGI_FORNEC
+         varFORNECEDORE(intReg, 2) = Format(BREC2!SGI_DESDE, "DD/MM/YYYY")
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+
+   '' --------------------------------------------
+   '' Clientes
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "      SGI_CLIECLIENTES " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varCLIENTES(1 To intReg, 1 To 2) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varCLIENTES(intReg, 1) = BREC2!SGI_CLIENTE
+         varCLIENTES(intReg, 2) = Format(BREC2!SGI_DESDE, "DD/MM/YYYY")
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' --------------------------------------------
+   '' Sistema de Certificação
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "      SGI_CLISISCERT " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varSISTCERTIF(1 To intReg) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varSISTCERTIF(intReg) = BREC2!SGI_DESCRICAO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+
+   '' --------------------------------------------
+   '' Empresas que já atende
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "      SGI_CLIATENDIDO " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim varEMPREATENDE(1 To intReg, 1 To 2) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         varEMPREATENDE(intReg, 1) = BREC2!SGI_DESCRICAO
+         varEMPREATENDE(intReg, 2) = BREC2!SGI_CODSEG
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' ------------------------------------------------------------
+   '' Transportadoras
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_CLITRANSP " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim arrTRANSP(1 To intReg) As Long
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         arrTRANSP(intReg) = BREC2!SGI_CODTRANSP
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' ------------------------------------------------------------
+   '' Pega os Tecnicos
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_CLITECNICO " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODCLI   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim arrTECNICOS(1 To intReg) As Long
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         arrTECNICOS(intReg) = BREC2!SGI_CODIGO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' ======================================
+   '' Pega Vendedores
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       * " & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_CADCLIEVEND " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL = " & FILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODCLI = " & intCLIECODIGO
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim arrVENDEDORES(1 To intReg) As Long
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         arrVENDEDORES(intReg) = BREC2!SGI_CODIGO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+   
+   '' ------------------------------------------------------------
+   '' Produto
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_PRODCLI " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim arrPRODUTO(1 To intReg)
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         arrPRODUTO(intReg) = Trim(BREC2!SGI_PRODUTO)
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   BREC2.Close
+   
+   
+   '' Produtos do Cliente
+   sSql = ""
+   
+    sSql = "Select Case PRO.SGI_PRODUTOTIPO " & vbCrLf
+    sSql = sSql & "            When 1 Then replicate('0',(3 - len(Ltrim(Rtrim(Convert(Char(10),PRO.SGI_CODLINPROD)))))) + Ltrim(Rtrim(Convert(Char(10),PRO.SGI_CODLINPROD))) + '.' + " & vbCrLf
+    sSql = sSql & "                        replicate('0',(4 - len(Ltrim(Rtrim(Convert(Char(10),PRO.SGI_CODCLIE)))))) + Ltrim(Rtrim(Convert(Char(10),PRO.SGI_CODCLIE))) + '.' + " & vbCrLf
+    sSql = sSql & "                        replicate('0',(2 - len(Ltrim(Rtrim(Convert(Char(10),PRO.SGI_CODROTULO)))))) + Ltrim(Rtrim(Convert(Char(10),PRO.SGI_CODROTULO))) + '.' + " & vbCrLf
+    sSql = sSql & "                        (Case " & vbCrLf
+    sSql = sSql & "                              When PRO.SGI_DIGVERIF Is Null Then '0' " & vbCrLf
+    sSql = sSql & "                              When PRO.SGI_DIGVERIF Is Not Null Then Ltrim(Rtrim(Convert(Char(2),PRO.SGI_DIGVERIF))) End) " & vbCrLf
+    sSql = sSql & "            When 0 Then PRO.SGI_CODIGO End As SGI_CODIGO " & vbCrLf
+    sSql = sSql & "      ,PRO.SGI_IDPRODUTO" & vbCrLf
+    sSql = sSql & "      ,PRO.SGI_DESCRICAO" & vbCrLf
+    sSql = sSql & "      ,PRO.SGI_CODLINPROD" & vbCrLf
+    sSql = sSql & "  From " & vbCrLf
+    sSql = sSql & "       SGI_PRODCLIE   CLIE" & vbCrLf
+    sSql = sSql & "      ,SGI_CADPRODUTO PRO" & vbCrLf
+    sSql = sSql & " Where " & vbCrLf
+    sSql = sSql & "       CLIE.SGI_FILIAL    = " & intFILIAL & vbCrLf
+    sSql = sSql & "   And CLIE.SGI_CODIGO    = " & intCLIECODIGO & vbCrLf
+    sSql = sSql & "   And PRO.SGI_FILIAL     = CLIE.SGI_FILIAL" & vbCrLf
+    sSql = sSql & "   And PRO.SGI_IDPRODUTO  = CLIE.SGI_IDPRODUTO" & vbCrLf
+    sSql = sSql & "Order By PRO.SGI_CODLINPROD"
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim arrPRODUTOS(1 To intReg, 1 To 3) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         arrPRODUTOS(intReg, 1) = Trim(Str(BREC2!SGI_IDPRODUTO))
+         arrPRODUTOS(intReg, 2) = Trim(BREC2!SGI_CODIGO)
+         arrPRODUTOS(intReg, 3) = Trim(BREC2!SGI_DESCRICAO)
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   
+   BREC2.Close
+
+
+
+   '' ------------------------------------------------------------
+   '' Condição de Pagamento do Cliente
+   BREC2.ActiveConnection = adoBanco_Dados
+      
+   sSql = ""
+   
+   sSql = "Select " & vbCrLf
+   sSql = sSql & "       *" & vbCrLf
+   sSql = sSql & "  From " & vbCrLf
+   sSql = sSql & "       SGI_CONDPGTOCLIE " & vbCrLf
+   sSql = sSql & " Where " & vbCrLf
+   sSql = sSql & "       SGI_FILIAL   = " & intFILIAL & vbCrLf
+   sSql = sSql & "   And SGI_CODIGO   = " & intCLIECODIGO & vbCrLf
+   
+   BREC2.Open sSql, adoBanco_Dados, adOpenDynamic
+   
+   If Not BREC2.EOF Then
+   
+      intReg = 0
+      Do While Not BREC2.EOF
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+      
+      ReDim arrCONDPGTOCLIE(1 To intReg, 1 To 1) As String
+      
+      intReg = 1
+      BREC2.MoveFirst
+      Do While Not BREC2.EOF
+         arrCONDPGTOCLIE(intReg, 1) = BREC2!SGI_CODCONDPGTO
+         intReg = intReg + 1
+         BREC2.MoveNext
+      Loop
+   
+   End If
+   BREC2.Close
+
+
+End Function
+
+
+Public Sub PreenchComboBancos(Combo As Variant)
+
+    Combo.Clear
+    
+    sSql = "Select " & vbCrLf
+    sSql = sSql & "       *  " & vbCrLf
+    sSql = sSql & "  from " & vbCrLf
+    sSql = sSql & "       SGI_CADBANCOS " & vbCrLf
+    sSql = sSql & "Where " & vbCrLf
+    sSql = sSql & "      SGI_FILIAL = " & intFILIAL & vbCrLf
+    sSql = sSql & "Order by SGI_CODIGO"
+    
+    BREC.Open sSql, adoBanco_Dados, adOpenDynamic
+    
+    Do While Not BREC.EOF
+       Combo.AddItem Space(5 - Len(Trim(Str(BREC!SGI_CODIGO)))) & Trim(Str(BREC!SGI_CODIGO)) & " - " & Trim(BREC!SGI_AGENCIA) & Space(10 - Len(Trim(BREC!SGI_AGENCIA))) & " - " & Trim(BREC!SGI_CC) & Space(20 - Len(Trim(BREC!SGI_CC))) & " - " & Trim(BREC!SGI_DESCRICAO)
+       Combo.ItemData(Combo.NewIndex) = BREC!SGI_CODIGO
+       BREC.MoveNext
+    Loop
+    
+    If Combo.ListCount > 0 Then Combo.ListIndex = 0
+    
+    BREC.Close
+
+End Sub
+
+Public Function Atualiza(strACAO As String, lngCODIGO As Long, lngFilial_Atu As Integer, strModulo As String) As Boolean
+    
+On Error GoTo Erro_Atualiza
+
+    Atualiza = False
+    
+    '' Inicia transação
+    adoBanco_Dados.BeginTrans
+    BGRV.ActiveConnection = adoBanco_Dados
+    
+    sSql = "Select" & vbCrLf
+    sSql = sSql & "      *" & vbCrLf
+    sSql = sSql & "  From" & vbCrLf
+    sSql = sSql & "      SGI_ATUALIZA" & vbCrLf
+    sSql = sSql & " Where" & vbCrLf
+    sSql = sSql & "      SGI_FILIAL = " & lngFilial_Atu & vbCrLf
+    sSql = sSql & "  And SGI_MODULO = '" & Trim(strModulo) & "'"
+    
+    BREC.Open sSql, adoBanco_Dados, adOpenDynamic
+    If BREC.EOF Then
+       
+        sSql = "Insert Into SGI_ATUALIZA (SGI_FILIAL" & vbCrLf
+        sSql = sSql & "                  ,SGI_MODULO" & vbCrLf
+        sSql = sSql & "                  ,SGI_ACAO" & vbCrLf
+        sSql = sSql & "                  ,SGI_CODIGO)" & vbCrLf
+        sSql = sSql & "           Values (" & vbCrLf
+        sSql = sSql & "                   " & lngFilial_Atu & vbCrLf
+        sSql = sSql & "                 ,'" & Trim(strModulo) & "'" & vbCrLf
+        sSql = sSql & "                 ,'" & Trim(strACAO) & "'" & vbCrLf
+        sSql = sSql & "                 ,'" & Trim(Str(lngCODIGO)) & "'" & vbCrLf
+        sSql = sSql & "                   )"
+    
+        BGRV.CommandText = sSql
+        BGRV.Execute
+    
+    Else
+    
+        sSql = sSql & "Update SGI_ATUALIZA Set" & vbCrLf
+        sSql = sSql & "           SGI_ACAO   = '" & Trim(strACAO) & "'" & vbCrLf
+        sSql = sSql & "          ,SGI_CODIGO = '" & Trim(Str(lngCODIGO)) & "'" & vbCrLf
+        sSql = sSql & "Where " & vbCrLf
+        sSql = sSql & "      SGI_FILIAL = " & lngFilial_Atu & vbCrLf
+        sSql = sSql & "  And SGI_MODULO = '" & Trim(strModulo) & "'"
+        
+        BGRV.CommandText = sSql
+        BGRV.Execute
+    
+    End If
+    BREC.Close
+    
+    Atualiza = True
+    
+    adoBanco_Dados.CommitTrans
+    
+    Exit Function
+        
+Erro_Atualiza:
+    
+     adoBanco_Dados.RollbackTrans
+     
+     Dim objErro    As Object
+     Set objErro = CreateObject("BLBCWS.clsFuncoes")
+     Call objErro.Sub_DescErro(Str(Err.Number), Err.Description, strACAO, sSql)
+     Set objErro = Nothing
+    
+End Function
+
+Public Sub PreenchComboTransportadoras(Combo As Variant)
+
+    Combo.Clear
+    
+    sSql = "Select " & vbCrLf
+    sSql = sSql & "       *  " & vbCrLf
+    sSql = sSql & "  from " & vbCrLf
+    sSql = sSql & "       SGI_CADTRANSP " & vbCrLf
+    sSql = sSql & "Where " & vbCrLf
+    sSql = sSql & "      SGI_FILIAL = " & intFILIAL & vbCrLf
+    sSql = sSql & "Order by SGI_CODIGO"
+    
+    BREC.Open sSql, adoBanco_Dados, adOpenDynamic
+    
+    Do While Not BREC.EOF
+       Combo.AddItem Trim(BREC!SGI_DESCRICAO)
+       Combo.ItemData(Combo.NewIndex) = BREC!SGI_CODIGO
+       BREC.MoveNext
+    Loop
+    
+    BREC.Close
+
+End Sub
+
+Public Sub PreencheComboProd(Combo As Variant)
+
+     sSql = "Select " & vbCrLf
+     sSql = sSql & "       PROD.* " & vbCrLf
+     sSql = sSql & "  From " & vbCrLf
+     sSql = sSql & "       SGI_CADPRODUTO PROD" & vbCrLf
+     sSql = sSql & " Where " & vbCrLf
+     sSql = sSql & "       PROD.SGI_FILIAL      = " & intFILIAL & vbCrLf
+     ''sSql = sSql & "   And PROD.SGI_PRODUTOESTILO = 5"
+     
+     BREC.Open sSql, adoBanco_Dados, adOpenDynamic
+     
+     Do While Not BREC.EOF
+        If Not IsNull(BREC!SGI_CODIGO) Then
+            Combo.AddItem Trim(BREC!SGI_CODIGO) & Space(10 - Len(Trim(BREC!SGI_CODIGO))) & " - " & Trim(BREC!SGI_DESCRICAO)
+        End If
+        BREC.MoveNext
+     Loop
+     BREC.Close
+    
+End Sub
+

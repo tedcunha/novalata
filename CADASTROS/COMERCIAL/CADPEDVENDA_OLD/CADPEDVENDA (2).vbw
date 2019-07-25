@@ -1,0 +1,10 @@
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+clsCADPEDVENDA = 25, 25, 669, 450, Z
+frmCADPEDVENDAP = 25, 25, 669, 460, C, 25, 25, 669, 460, C
+frmCADPEDVENDA = 50, 50, 694, 485, C, 50, 50, 694, 485, C
+frmCADCOTAS = 0, 0, 0, 0, C, 75, 75, 719, 510, C
+frmDesenhoPedido = 0, 0, 0, 0, C, 100, 100, 744, 535, C
+frmUSULIB = 0, 0, 0, 0, C, 125, 125, 769, 560, C
+clsFuncoes = 100, 100, 995, 305, C
+frmCADOSARTES = 0, 0, 0, 0, C, 150, 150, 794, 585, C

@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : Liquida()
+ 
+ 
+Erro Numero    :  381
+Erro Descrição : Invalid property array index
+ 
+ 
+Função : Liquida()

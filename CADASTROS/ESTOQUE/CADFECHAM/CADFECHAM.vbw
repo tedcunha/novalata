@@ -1,0 +1,5 @@
+clsCADFECHAM = 124, 343, 974, 804, C
+frmCADFECHAMP = 125, 125, 975, 586, C, 100, 100, 950, 561, C
+frmCADFECHAM = 75, 75, 925, 536, C, 125, 125, 975, 586, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C

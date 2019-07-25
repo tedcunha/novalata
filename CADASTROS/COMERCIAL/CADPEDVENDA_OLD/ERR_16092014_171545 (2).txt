@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : PegaIDProduto()
+ 
+ 
+Erro Numero    : -2147467259
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Arithmetic overflow error converting numeric to data type varchar.
+ 
+ 
+Função : PegaIDProduto()

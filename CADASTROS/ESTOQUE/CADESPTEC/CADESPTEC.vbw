@@ -1,0 +1,5 @@
+clsCADESPTEC = 0, 0, 0, 0, C
+frmCADESPTECP = 0, 0, 0, 0, C, 175, 175, 860, 626, C
+frmCADESPTEC = 0, 0, 612, 461, C, 200, 200, 885, 651, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C

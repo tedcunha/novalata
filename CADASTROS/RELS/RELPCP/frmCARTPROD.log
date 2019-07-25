@@ -1,0 +1,6 @@
+Line 189: Class MSComctlLib.ProgressBar of control prgBAR was not a loaded control class.
+Line 195: The property name _ExtentX in prgBAR is invalid.
+Line 196: The property name _ExtentY in prgBAR is invalid.
+Line 197: The property name _Version in prgBAR is invalid.
+Line 199: The property name Min in prgBAR is invalid.
+Line 200: The property name Scrolling in prgBAR is invalid.

@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : Altera()
+Usuário        : 
+ 
+Erro Numero    : -2147217900
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Line 8: Incorrect syntax near '='.
+ 
+ 
+Função : Altera()

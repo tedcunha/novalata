@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : CmdSalva_Click()
+ 
+ 
+Erro Numero    :  3704
+Erro Descrição : Operação não permitida quando o objeto está fechado.
+ 
+ 
+Função : CmdSalva_Click()

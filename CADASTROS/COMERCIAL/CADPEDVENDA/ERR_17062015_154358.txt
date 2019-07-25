@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : PegaQtdeEntregaPcota()
+ 
+ 
+Erro Numero    :  13
+Erro Descrição : Type mismatch
+ 
+ 
+Função : PegaQtdeEntregaPcota()

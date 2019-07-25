@@ -1,0 +1,5 @@
+clsCADTELAS = 200, 200, 877, 661, C
+frmCADTELAS = 100, 100, 776, 561, C, 0, 0, 677, 461, C
+frmCADTELASP = 50, 50, 727, 511, C, 25, 25, 702, 486, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C

@@ -1,0 +1,14 @@
+Select 
+       ORDP.* 
+  From 
+       SGI_ORDEMPROD_STEEL ORDP
+     , SGI_CADPRODUTO      PROD
+ Where 
+       ORDP.SGI_FILIAl    = 1 
+   And ORDP.SGI_STATUS    In(0,1)
+   And PROD.SGI_FILIAL    = ORDP.SGI_FILIAl 
+   And PROD.SGI_IDPRODUTO = ORDP.SGI_IDPRODUTO 
+   And PROD.SGI_CODLINPROD = 900
+Order By SGI_DATAORDEM Desc
+
+Select * From SGI_CADPRODUTO Where SGI_FILIAL = 1

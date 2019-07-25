@@ -1,0 +1,6 @@
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+clsCADOORDFAB = 0, 0, 859, 507, C
+frmCADOORDFAB = 50, 50, 809, 557, C, 100, 100, 861, 633, C
+frmCADOORDFABP = 0, 0, 630, 507, C, 125, 125, 886, 658, C
+frmMOSTRAOP = 0, 0, 0, 0, C, 150, 150, 911, 683, C

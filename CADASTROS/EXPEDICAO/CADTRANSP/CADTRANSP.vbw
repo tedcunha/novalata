@@ -1,0 +1,5 @@
+clsCADTRANSP = 0, 0, 0, 0, C
+frmCADTRANSPP = 0, 0, 0, 0, C, 100, 100, 744, 535, C
+frmCADTRANSP = 0, 0, 0, 0, C, 125, 125, 769, 560, C
+VariaveisGen = 0, 0, 0, 0, C
+mdlVariaveis = 0, 0, 0, 0, C

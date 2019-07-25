@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : PegaDescTabelas()
+ 
+ 
+Erro Numero    : -2147467259
+Erro Descrição : [Microsoft][ODBC SQL Server Driver]Tempo limite da consulta excedido
+ 
+ 
+Função : PegaDescTabelas()

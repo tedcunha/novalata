@@ -1,0 +1,5 @@
+clsCADESPPROD = 200, 200, 1050, 661, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+frmCADESPPROD = 100, 100, 950, 561, C, 25, 25, 804, 486, C
+frmCADESPPRODP = 0, 0, 0, 0, C, 50, 50, 760, 511, C

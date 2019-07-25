@@ -1,0 +1,187 @@
+VERSION 5.00
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0"; "mscomctl.OCX"
+Begin VB.Form frmRELUSUARIOS 
+   Caption         =   "Relatório de Usuários do Sistema"
+   ClientHeight    =   2670
+   ClientLeft      =   60
+   ClientTop       =   345
+   ClientWidth     =   8490
+   KeyPreview      =   -1  'True
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
+   ScaleHeight     =   2670
+   ScaleWidth      =   8490
+   StartUpPosition =   1  'CenterOwner
+   Begin VB.Frame fraVisua 
+      Caption         =   "[ Visualização ]"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00800000&
+      Height          =   615
+      Left            =   0
+      TabIndex        =   9
+      Top             =   1440
+      Width           =   8415
+      Begin VB.OptionButton optVisualizacao 
+         Caption         =   "Em Excel"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00800000&
+         Height          =   255
+         Index           =   1
+         Left            =   1560
+         TabIndex        =   11
+         Top             =   240
+         Width           =   1455
+      End
+      Begin VB.OptionButton optVisualizacao 
+         Caption         =   "Em tela"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H00800000&
+         Height          =   255
+         Index           =   0
+         Left            =   120
+         TabIndex        =   10
+         Top             =   240
+         Width           =   1455
+      End
+   End
+   Begin VB.Frame Frame2 
+      Height          =   495
+      Left            =   0
+      TabIndex        =   7
+      Top             =   2040
+      Width           =   8415
+      Begin MSComctlLib.ProgressBar prgBar 
+         Height          =   255
+         Left            =   120
+         TabIndex        =   8
+         Top             =   120
+         Width           =   8175
+         _ExtentX        =   14420
+         _ExtentY        =   450
+         _Version        =   393216
+         Appearance      =   0
+         Min             =   1e-4
+         Scrolling       =   1
+      End
+   End
+   Begin VB.Frame Frame6 
+      Caption         =   "[ Usuários ]"
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H00800000&
+      Height          =   615
+      Left            =   0
+      TabIndex        =   3
+      Top             =   840
+      Width           =   8415
+      Begin VB.CommandButton Command1 
+         Height          =   315
+         Left            =   1080
+         Picture         =   "frmRELUSUARIOS.frx":0000
+         Style           =   1  'Graphical
+         TabIndex        =   5
+         Top             =   240
+         Width           =   375
+      End
+      Begin VB.TextBox txtCODUSU 
+         Alignment       =   1  'Right Justify
+         Appearance      =   0  'Flat
+         Height          =   285
+         Left            =   120
+         TabIndex        =   4
+         Text            =   "txtCODUSU"
+         Top             =   240
+         Width           =   975
+      End
+      Begin VB.Label lblDescUsuario 
+         Appearance      =   0  'Flat
+         BackColor       =   &H80000005&
+         BorderStyle     =   1  'Fixed Single
+         Caption         =   "lblDescUsuario"
+         ForeColor       =   &H80000008&
+         Height          =   285
+         Left            =   1440
+         TabIndex        =   6
+         Top             =   240
+         Width           =   6855
+      End
+   End
+   Begin VB.Frame Frame1 
+      Height          =   855
+      Left            =   0
+      TabIndex        =   0
+      Top             =   0
+      Width           =   8415
+      Begin VB.CommandButton cmdVoltar 
+         Caption         =   "&Volta"
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Left            =   120
+         Picture         =   "frmRELUSUARIOS.frx":0102
+         Style           =   1  'Graphical
+         TabIndex        =   2
+         Top             =   120
+         Width           =   855
+      End
+      Begin VB.CommandButton cmdImpressao 
+         Caption         =   "Im&prime"
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   615
+         Left            =   960
+         Picture         =   "frmRELUSUARIOS.frx":0204
+         Style           =   1  'Graphical
+         TabIndex        =   1
+         ToolTipText     =   "Exclui Empresa"
+         Top             =   120
+         Width           =   855
+      End
+   End
+End

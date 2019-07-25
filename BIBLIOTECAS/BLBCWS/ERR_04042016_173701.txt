@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDAP
+Função         : Imprime_Ped_Novo()
+ 
+ 
+Erro Numero    : -2147217865
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid object name 'SGI_CADPRODUTO.SGI_CADPRODUTO'.
+ 
+ 
+Função : Imprime_Ped_Novo()

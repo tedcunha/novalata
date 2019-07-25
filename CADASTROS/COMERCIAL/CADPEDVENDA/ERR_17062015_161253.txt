@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : VerifOrdFat()
+ 
+ 
+Erro Numero    : -2147217900
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]The column prefix 'Cod' does not match with a table name or alias name used in the query.
+ 
+ 
+Função : VerifOrdFat()

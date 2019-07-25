@@ -1,0 +1,7 @@
+Line 22: Class MSComctlLib.ProgressBar of control pgbProgresso was not a loaded control class.
+Line 28: The property name _ExtentX in pgbProgresso is invalid.
+Line 29: The property name _ExtentY in pgbProgresso is invalid.
+Line 30: The property name _Version in pgbProgresso is invalid.
+Line 32: The property name Min in pgbProgresso is invalid.
+Line 33: The property name Max in pgbProgresso is invalid.
+Line 34: The property name Scrolling in pgbProgresso is invalid.

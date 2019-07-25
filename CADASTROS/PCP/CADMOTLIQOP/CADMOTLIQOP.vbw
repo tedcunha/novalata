@@ -1,0 +1,5 @@
+clsCADMOTLIQOP = 125, 125, 755, 632, C
+frmCADMOTLIQOPP = 175, 175, 805, 682, C, 100, 100, 861, 633, C
+frmCADMOTLIQOP = 0, 0, 0, 0, C, 125, 125, 886, 658, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C

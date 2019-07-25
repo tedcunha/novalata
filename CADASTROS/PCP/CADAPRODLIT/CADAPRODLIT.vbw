@@ -1,0 +1,8 @@
+clsCADAPRODLIT = 25, 25, 661, 486, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+frmCADAPRODLIT = 50, 50, 686, 511, C, 50, 50, 686, 511, C
+frmCADAPRODLITP = 75, 75, 711, 536, C, 75, 75, 711, 536, C
+clsFuncoes = 0, 0, 0, 0, C
+frmPESQPADRAO = 0, 0, 0, 0, C, 175, 175, 811, 636, C
+clsPESQPADRAO = 0, 0, 0, 0, C

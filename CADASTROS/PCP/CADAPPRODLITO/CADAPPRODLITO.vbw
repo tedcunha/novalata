@@ -1,0 +1,6 @@
+clsCADAPPRODLITO = 25, 25, 735, 486, C
+frmCADAPPRODLITO = 125, 125, 761, 586, C, 50, 50, 760, 511, C
+CADAPPRODLITOP = 75, 75, 711, 536, C, 75, 75, 785, 536, C
+mdlVariaveis = 150, 150, 929, 611, C
+VariaveisGen = 0, 0, 0, 0, C
+clsFuncoes = 125, 125, 761, 586, C

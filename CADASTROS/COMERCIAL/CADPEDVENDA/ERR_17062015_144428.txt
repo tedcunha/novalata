@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : VerifOrdFat()
+ 
+ 
+Erro Numero    :  94
+Erro Descrição : Invalid use of Null
+ 
+ 
+Função : VerifOrdFat()

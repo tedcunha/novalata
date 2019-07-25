@@ -1,0 +1,7 @@
+Line 18: Class MSComctlLib.ProgressBar of control pbDADOS was not a loaded control class.
+Line 24: The property name _ExtentX in pbDADOS is invalid.
+Line 25: The property name _ExtentY in pbDADOS is invalid.
+Line 26: The property name _Version in pbDADOS is invalid.
+Line 28: The property name Min in pbDADOS is invalid.
+Line 29: The property name Max in pbDADOS is invalid.
+Line 30: The property name Scrolling in pbDADOS is invalid.

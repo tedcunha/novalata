@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : grdTIPREPROV_ValidateEdit()
+ 
+ 
+Erro Numero    :  0
+Erro Descrição : 
+ 
+ 
+Função : grdTIPREPROV_ValidateEdit()

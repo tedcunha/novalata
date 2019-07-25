@@ -1,0 +1,10 @@
+Foi impossivel Alterar o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : grdProgEntrega_BeforeEdit()
+ 
+ 
+Erro Numero    : -2147217900
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Invalid column name 'SGI_STATUS'.
+ 
+ 
+Função : grdProgEntrega_BeforeEdit()

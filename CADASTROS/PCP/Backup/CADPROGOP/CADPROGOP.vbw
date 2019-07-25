@@ -1,0 +1,6 @@
+clsCADPROGOP = 25, 25, 864, 476, C
+frmCADPROGOP = 75, 75, 685, 526, C, 50, 50, 889, 501, C
+frmCADPROGOPP = 150, 150, 1077, 601, C, 75, 75, 914, 526, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 75, 75, 844, 526, C
+frmRESP = 200, 200, 798, 651, C, 75, 75, 673, 526, C

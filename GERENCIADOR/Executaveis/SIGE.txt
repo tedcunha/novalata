@@ -1,0 +1,11 @@
+tpconect=2
+DSN=NOVALATA;
+UID=sa;
+PWD=;
+cor=-2147483633
+camimg=
+image=
+CamRel=C:\ricardo\SGI\NOVALATA\RELATORIOS\MOSTRAREL\RPT\
+imgrot=C:\RICARDO\SGI\NOVALATA\IMAGENS\
+camErro=\\SRVLATA\RPT\
+camArq=C:\ricardo\PROGRAMAS\ARQUIVOS\

@@ -1,0 +1,9 @@
+clsCADFLUXOPROD = 0, 0, 0, 0, C
+frmCADFLUXOPROD = 0, 0, 0, 0, C, 22, 22, 340, 468, C
+frmCADPROCESSO = 0, 0, 0, 0, C, 66, 66, 384, 512, C
+frmCADPRODENTRADA = 0, 0, 0, 0, C, 88, 88, 406, 534, C
+frmCADPRODSAIDA = 0, 0, 0, 0, C, 110, 110, 428, 556, C
+frmCADFLUXOPRODP = 0, 0, 0, 0, C, 44, 44, 362, 490, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+frmVIEWARVPROD = 66, 66, 384, 512, Z, 22, 22, 340, 468, C

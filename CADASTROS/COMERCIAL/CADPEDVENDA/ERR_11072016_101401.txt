@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : Consulta()
+ 
+ 
+Erro Numero    :  94
+Erro Descrição : Invalid use of Null
+ 
+ 
+Função : Consulta()

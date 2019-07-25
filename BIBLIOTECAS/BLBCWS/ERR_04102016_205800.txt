@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDAP
+Função         : ImpPed()
+Usuário        : 
+ 
+Erro Numero    : -2147217900
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Line 41: Incorrect syntax near '.'.
+ 
+ 
+Função : ImpPed()

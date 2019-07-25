@@ -1,0 +1,9 @@
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+clsCADFLUXOPROD = 0, 0, 0, 0, C
+frmCADFLUXOPRODP = 0, 0, 0, 0, C, 125, 125, 904, 586, C
+frmCADFLUXOPROD = 0, 0, 0, 0, C, 100, 100, 879, 561, C
+frmCADPROCESSO = 0, 0, 0, 0, C, 150, 150, 929, 611, C
+frmCADPRODENTRADA = 0, 0, 0, 0, C, 175, 175, 954, 636, C
+frmCADPRODSAIDA = 0, 0, 0, 0, C, 200, 200, 979, 661, C
+frmCADARVPROD = 0, 0, 0, 0, C, 75, 75, 854, 536, C

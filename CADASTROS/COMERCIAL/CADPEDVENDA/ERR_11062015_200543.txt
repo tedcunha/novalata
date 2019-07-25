@@ -1,0 +1,10 @@
+Foi impossivel Alterar o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : Altera()
+ 
+ 
+Erro Numero    :  381
+Erro Descrição : Invalid property array index
+ 
+ 
+Função : Altera()

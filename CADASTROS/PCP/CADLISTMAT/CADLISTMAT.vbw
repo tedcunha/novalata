@@ -1,0 +1,6 @@
+clsCADLISTMAT = 150, 150, 795, 575, C
+frmCADLISTMATP = 0, 0, 0, 0, C, 0, 0, 226, 446, C
+frmCADARVPROD = 22, 22, 678, 418, C, 220, 220, 446, 666, C
+frmCADPRODLISTMAT = 0, 0, 0, 0, C, 22, 22, 248, 468, C
+mdlVariaveis = 66, 66, 722, 462, C
+VariaveisGen = 0, 0, 0, 0, C

@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : Form_KeyPress()
+ 
+ 
+Erro Numero    :  70
+Erro Descrição : Permission denied
+ 
+ 
+Função : Form_KeyPress()

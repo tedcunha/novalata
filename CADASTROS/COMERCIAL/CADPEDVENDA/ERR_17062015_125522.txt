@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDA
+Função         : VerifOrdFat()
+ 
+ 
+Erro Numero    :  3705
+Erro Descrição : Operação não permitida quando o objeto está aberto.
+ 
+ 
+Função : VerifOrdFat()

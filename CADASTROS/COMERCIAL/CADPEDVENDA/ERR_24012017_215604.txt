@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : grdProduto_CellButtonClick()
+Usuário        : 
+ 
+Erro Numero    :  380
+Erro Descrição : Invalid property value
+ 
+ 
+Função : grdProduto_CellButtonClick()

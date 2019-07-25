@@ -1,0 +1,5 @@
+clsCADMAQUINA = 0, 0, 0, 0, C
+frmCADMAQUINA = 0, 0, 0, 0, C, 100, 100, 861, 633, C
+frmCADMAQUINAP = 0, 0, 0, 0, C, 125, 125, 886, 658, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C

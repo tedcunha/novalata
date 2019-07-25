@@ -1,0 +1,4 @@
+Line 23: Class ComctlLib.Toolbar of control TbrMenu was not a loaded control class.
+Line 35: Class ComctlLib.StatusBar of control stbMensagem was not a loaded control class.
+Line 75: Class VSFlex8LCtl.VSFlexGrid of control grdMENU was not a loaded control class.
+Line 169: Class ComctlLib.ImageList of control ImageList1 was not a loaded control class.

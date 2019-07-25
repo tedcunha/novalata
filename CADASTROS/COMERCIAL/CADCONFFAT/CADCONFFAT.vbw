@@ -1,0 +1,5 @@
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+clsCADCONFFAT = -253, 62, 603, 592, C
+frmCADCONFFATP = 44, 44, 900, 574, C, 110, 110, 966, 640, C
+frmCADCONFFAT = 242, 242, 1098, 772, C, -324, 86, 532, 616, C

@@ -1,0 +1,8 @@
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+clsCADCLIENTE = 0, 0, 694, 445, C
+frmCADCLIENTEP = 25, 25, 973, 225, C, 200, 200, 894, 645, C
+frmCADCLIENTE = 125, 125, 844, 508, C, 75, 75, 769, 520, C
+clsFuncoes = 0, 0, 742, 461, C
+frmPESQPADRAO = 0, 0, 0, 0, C, 0, 0, 779, 461, C
+clsPESQPADRAO = 150, 150, 843, 611, C

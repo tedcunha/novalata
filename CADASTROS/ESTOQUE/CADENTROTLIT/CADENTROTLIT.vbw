@@ -1,0 +1,5 @@
+clsCADENTROTLIT = 175, 175, 954, 636, C
+frmCADENTROTLIT = 75, 75, 779, 536, C, 200, 200, 979, 661, C
+frmCADENTROTLITP = 200, 200, 979, 661, C, 0, 0, 779, 461, C
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C

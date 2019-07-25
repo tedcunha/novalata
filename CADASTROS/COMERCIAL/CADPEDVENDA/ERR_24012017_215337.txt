@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : grdProduto_CellButtonClick()
+Usuário        : 
+ 
+Erro Numero    :  3021
+Erro Descrição : BOF ou EOF são verdadeiros, ou o registro atual foi excluído. A operação solicitada pelo aplicativo requer um registro atual.
+ 
+ 
+Função : grdProduto_CellButtonClick()

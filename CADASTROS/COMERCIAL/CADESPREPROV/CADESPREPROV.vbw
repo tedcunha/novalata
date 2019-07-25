@@ -1,0 +1,5 @@
+mdlVariaveis = 0, 0, 0, 0, C
+VariaveisGen = 0, 0, 0, 0, C
+clsCADESPREPROV = 22, 22, 211, 340, C
+frmCADESPREPROVP = 22, 22, 525, 340, C, 66, 66, 532, 384, C
+frmCADESPREPROV = 0, 0, 503, 318, C, 44, 44, 233, 362, C

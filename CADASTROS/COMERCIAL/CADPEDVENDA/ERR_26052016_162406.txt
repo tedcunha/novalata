@@ -1,0 +1,12 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : PegaDescTabelas()
+ 
+ 
+Erro Numero    : -2147217900
+Erro Descrição : [Microsoft][ODBC SQL Server Driver][SQL Server]Line 6: Incorrect syntax near ','.
+ 
+ 
+Função : PegaDescTabelas()
+Campo Nome : lblDescCondPgto
+Função Pai : txtCodCondPgto_Validate()

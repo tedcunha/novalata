@@ -1,0 +1,9 @@
+Módulo         : frmCADPEDVENDAP
+Função         : Imprime_Ped_Novo()
+ 
+ 
+Erro Numero    :  3705
+Erro Descrição : Operação não permitida quando o objeto está aberto.
+ 
+ 
+Função : Imprime_Ped_Novo()

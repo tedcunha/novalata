@@ -1,0 +1,15 @@
+Line 2: Could not create reference: '{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.1#0'.
+Line 111: Class MSComctlLib.ProgressBar of control pgbClie was not a loaded control class.
+Line 331: Class MSComctlLib.ProgressBar of control pgbVendedor was not a loaded control class.
+Line 117: The property name _ExtentX in pgbClie is invalid.
+Line 118: The property name _ExtentY in pgbClie is invalid.
+Line 119: The property name _Version in pgbClie is invalid.
+Line 121: The property name Min in pgbClie is invalid.
+Line 122: The property name Max in pgbClie is invalid.
+Line 123: The property name Scrolling in pgbClie is invalid.
+Line 337: The property name _ExtentX in pgbVendedor is invalid.
+Line 338: The property name _ExtentY in pgbVendedor is invalid.
+Line 339: The property name _Version in pgbVendedor is invalid.
+Line 341: The property name Min in pgbVendedor is invalid.
+Line 342: The property name Max in pgbVendedor is invalid.
+Line 343: The property name Scrolling in pgbVendedor is invalid.

@@ -1,0 +1,10 @@
+Foi impossivel Incluir o registro !!!
+Módulo         : frmCADPEDVENDA
+Função         : grdProduto_CellButtonClick()
+ 
+ 
+Erro Numero    :  9
+Erro Descrição : Subscript out of range
+ 
+ 
+Função : grdProduto_CellButtonClick()
